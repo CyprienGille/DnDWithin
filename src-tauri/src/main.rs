@@ -19,7 +19,10 @@ struct Character {
 
 #[tauri::command]
 fn get_default() -> Character {
-    Character::default()
+    Character {
+        name: "Character name".to_string(),
+        ..Default::default()
+    }
 }
 
 #[tauri::command]
