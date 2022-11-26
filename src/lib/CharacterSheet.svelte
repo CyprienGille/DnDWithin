@@ -1,10 +1,5 @@
 <script lang="ts">
-    let cname = "Character Name";
-    let class_level = "Class X";
-    let player_name = "Player Name";
-    let race = "Race";
-    let bg = "Background";
-    let exp = "Experience";
+    export let c;
 </script>
 
 <main>
@@ -15,7 +10,7 @@
                 type="text"
                 name="CName"
                 id="cname"
-                bind:value={cname}
+                bind:value={c.name}
             />
         </div>
         <div class="w-2/3">
@@ -28,7 +23,7 @@
                         class="rounded-md p-2 border-slate-400 border-2"
                         type="text"
                         id="classlevel"
-                        bind:value={class_level}
+                        bind:value={c.class_level}
                     />
                 </div>
                 <div class="w-1/2">
@@ -37,7 +32,7 @@
                         class="rounded-md p-2 border-slate-400 border-2"
                         type="text"
                         id="playername"
-                        bind:value={player_name}
+                        bind:value={c.player_name}
                     />
                 </div>
             </div>
@@ -48,7 +43,7 @@
                         class="rounded-md p-2 border-slate-400 border-2"
                         type="text"
                         id="race"
-                        bind:value={race}
+                        bind:value={c.race}
                     />
                 </div>
                 <div class="w-1/3">
@@ -57,7 +52,7 @@
                         class="rounded-md p-2 border-slate-400 border-2"
                         type="text"
                         id="background"
-                        bind:value={bg}
+                        bind:value={c.bg}
                     />
                 </div>
                 <div class="w-1/3">
@@ -66,7 +61,7 @@
                         class="rounded-md p-2 border-slate-400 border-2"
                         type="text"
                         id="exp"
-                        bind:value={exp}
+                        bind:value={c.exp}
                     />
                 </div>
             </div>
