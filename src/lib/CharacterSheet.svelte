@@ -78,7 +78,7 @@
       </div>
     </div>
   </div>
-  <div class="flex">
+  <div class="flex mb-6">
     <div class="w-1/6 bg-slate-300 rounded-md pb-11">
       <div class="h-1/6 mb-2">
         <div class="text-center font-semibold">STR</div>
@@ -164,56 +164,44 @@
         <div class="font-semibold text-center mb-1">Saving throws</div>
         <div class="text-xs flex ml-1">
           <input type="checkbox" bind:checked={c.prof_st_str} />
-          <input
-            class="rounded-md border-2 mx-2 px-1 w-8"
-            type="text"
-            bind:value={c.st_str}
-          />
+          <div class="rounded-md border-2 mx-2 px-1 w-8">
+            {compute_modifier(c.str, c.prof_st_str)}
+          </div>
           <div>Strength</div>
         </div>
         <div class="text-xs flex ml-1">
           <input type="checkbox" bind:checked={c.prof_st_dex} />
-          <input
-            class="rounded-md border-2 mx-2 px-1 w-8"
-            type="text"
-            bind:value={c.st_dex}
-          />
+          <div class="rounded-md border-2 mx-2 px-1 w-8">
+            {compute_modifier(c.dex, c.prof_st_dex)}
+          </div>
           <div>Dexterity</div>
         </div>
         <div class="text-xs flex ml-1">
           <input type="checkbox" bind:checked={c.prof_st_con} />
-          <input
-            class="rounded-md border-2 mx-2 px-1 w-8"
-            type="text"
-            bind:value={c.st_con}
-          />
+          <div class="rounded-md border-2 mx-2 px-1 w-8">
+            {compute_modifier(c.con, c.prof_st_con)}
+          </div>
           <div>Constitution</div>
         </div>
         <div class="text-xs flex ml-1">
           <input type="checkbox" bind:checked={c.prof_st_int} />
-          <input
-            class="rounded-md border-2 mx-2 px-1 w-8"
-            type="text"
-            bind:value={c.st_int}
-          />
+          <div class="rounded-md border-2 mx-2 px-1 w-8">
+            {compute_modifier(c.int, c.prof_st_int)}
+          </div>
           <div>Intelligence</div>
         </div>
         <div class="text-xs flex ml-1">
           <input type="checkbox" bind:checked={c.prof_st_wis} />
-          <input
-            class="rounded-md border-2 mx-2 px-1 w-8"
-            type="text"
-            bind:value={c.st_wis}
-          />
+          <div class="rounded-md border-2 mx-2 px-1 w-8">
+            {compute_modifier(c.wis, c.prof_st_wis)}
+          </div>
           <div>Wisdom</div>
         </div>
         <div class="text-xs flex ml-1">
           <input type="checkbox" bind:checked={c.prof_st_cha} />
-          <input
-            class="rounded-md border-2 mx-2 px-1 w-8"
-            type="text"
-            bind:value={c.st_cha}
-          />
+          <div class="rounded-md border-2 mx-2 px-1 w-8">
+            {compute_modifier(c.cha, c.prof_st_cha)}
+          </div>
           <div>Charisma</div>
         </div>
         <div>
@@ -241,10 +229,8 @@
           </div>
         </div>
         <div class="h-2/6 mb-1 border-2">
-          <div class="font-semibold text-center">
-            Resistances and Immunities
-          </div>
-          <textarea class="w-full h-1/2" bind:value={c.res} />
+          <div class="font-semibold text-center">Resistances & Immunities</div>
+          <textarea class="w-full text-sm h-1/2" bind:value={c.res} />
         </div>
         <div class="h-1/6 flex mt-1">
           <div class="w-1/2 text-right pr-1">
@@ -260,9 +246,18 @@
             bind:value={c.prof_mod}
           />
         </div>
-        <div class="h-1/6">init and ac</div>
+        <div class="h-1/6 border-2">
+          <div class="font-semibold text-center">Speeds</div>
+          <input class="text-sm w-full" type="text" bind:value={c.speeds} />
+        </div>
       </div>
-      <div class="h-1/3 bg-slate-200">profs and languages</div>
+      <div class="h-1/3 bg-slate-200">
+        <div class="font-semibold pl-2">Proficiencies & Languages</div>
+        <textarea
+          class="w-full h-full bg-slate-200 text-sm"
+          bind:value={c.profs}
+        />
+      </div>
     </div>
     <div class="w-2/6">
       <div class="h-1/5">

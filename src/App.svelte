@@ -19,12 +19,6 @@
     c.wis = Number(c.wis);
     c.cha = Number(c.cha);
     c.prof_mod = Number(c.prof_mod);
-    c.st_str = Number(c.st_str);
-    c.st_dex = Number(c.st_dex);
-    c.st_con = Number(c.st_con);
-    c.st_int = Number(c.st_int);
-    c.st_wis = Number(c.st_wis);
-    c.st_cha = Number(c.st_cha);
     c.prof_st_str = Boolean(c.prof_st_str);
     c.prof_st_dex = Boolean(c.prof_st_dex);
     c.prof_st_con = Boolean(c.prof_st_con);

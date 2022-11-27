@@ -27,12 +27,6 @@ struct Character {
     wis: i32,
     cha: i32,
     prof_mod: i32,
-    st_str: i32,
-    st_dex: i32,
-    st_con: i32,
-    st_int: i32,
-    st_wis: i32,
-    st_cha: i32,
     prof_st_str: bool,
     prof_st_dex: bool,
     prof_st_con: bool,
@@ -42,6 +36,8 @@ struct Character {
     st_mods: String,
     ac: i32,
     res: String,
+    speeds: String,
+    profs: String,
 }
 
 #[tauri::command]
