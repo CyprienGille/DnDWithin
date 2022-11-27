@@ -1,8 +1,14 @@
 {
     "name": "Firhael",
-    "class_level": "Cleric 7",
+    "class_level": "Cleric 9",
     "player_name": "Callimethee",
     "race": "Eladrin",
     "bg": "Custom",
-    "exp": 0
+    "exp": 0,
+    "str": 12,
+    "dex": 14,
+    "con": 12,
+    "int": 16,
+    "wis": 20,
+    "cha": 9
 }

@@ -1,9 +1,22 @@
 <script lang="ts">
   export let c;
+
+  function compute_modifier(score, prof_mult) {
+    if (typeof prof_mult === "string") {
+      if (prof_mult === "false") {
+        prof_mult = 0;
+      } else {
+        prof_mult = 1;
+      }
+    }
+    const num =
+      Math.floor((score - 10) / 2) + Math.floor(prof_mult * c.prof_mod);
+    return (num >= 0 ? "+" : "") + num;
+  }
 </script>
 
 <main>
-  <div class="w-full flex items-center py-5 bg-red-100">
+  <div class="w-full flex items-center py-4 border-2">
     <div class="w-1/3 px-1">
       <input
         class="rounded-md w-full py-2 px-2 border-slate-400 border-2"
@@ -65,21 +78,201 @@
       </div>
     </div>
   </div>
-  <div class="flex items-center">
-    <div class="w-1/6 h-96 bg-red-300">ability scores</div>
-    <div class="w-1/6 h-96 ">
-      <div class="h-1/3 mb-2">
-        saving throws saving throws saving throws saving throws saving throws
+  <div class="flex">
+    <div class="w-1/6 bg-slate-300 rounded-md pb-11">
+      <div class="h-1/6 mb-2">
+        <div class="text-center font-semibold">STR</div>
+        <div class="text-center font-bold text-lg">
+          {compute_modifier(c.str, 0)}
+        </div>
+        <div class="text-center">
+          <input
+            class="text-center w-11/12 border-slate-400 border-2 rounded-sm"
+            type="text"
+            bind:value={c.str}
+          />
+        </div>
       </div>
-      <div class="h-2/3 my-2">
+      <div class="h-1/6 mb-2">
+        <div class="text-center font-semibold">DEX</div>
+        <div class="text-center font-bold text-lg">
+          {compute_modifier(c.dex, 0)}
+        </div>
+        <div class="text-center">
+          <input
+            class="text-center w-11/12 border-slate-400 border-2 rounded-sm"
+            type="text"
+            bind:value={c.dex}
+          />
+        </div>
+      </div>
+      <div class="h-1/6 mb-2">
+        <div class="text-center font-semibold">CON</div>
+        <div class="text-center font-bold text-lg">
+          {compute_modifier(c.con, 0)}
+        </div>
+        <div class="text-center">
+          <input
+            class="text-center w-11/12 border-slate-400 border-2 rounded-sm"
+            type="text"
+            bind:value={c.con}
+          />
+        </div>
+      </div>
+      <div class="h-1/6 mb-2">
+        <div class="text-center font-semibold">INT</div>
+        <div class="text-center font-bold text-lg">
+          {compute_modifier(c.int, 0)}
+        </div>
+        <div class="text-center">
+          <input
+            class="text-center w-11/12 border-slate-400 border-2 rounded-sm"
+            type="text"
+            bind:value={c.int}
+          />
+        </div>
+      </div>
+      <div class="h-1/6 mb-2">
+        <div class="text-center font-semibold">WIS</div>
+        <div class="text-center font-bold text-lg">
+          {compute_modifier(c.wis, 0)}
+        </div>
+        <div class="text-center">
+          <input
+            class="text-center w-11/12 border-slate-400 border-2 rounded-sm"
+            type="text"
+            bind:value={c.wis}
+          />
+        </div>
+      </div>
+      <div class="h-1/6 mb-1">
+        <div class="text-center font-semibold">CHA</div>
+        <div class="text-center font-bold text-lg">
+          {compute_modifier(c.cha, 0)}
+        </div>
+        <div class="text-center">
+          <input
+            class="text-center w-11/12 border-slate-400 border-2 rounded-sm"
+            type="text"
+            bind:value={c.cha}
+          />
+        </div>
+      </div>
+    </div>
+    <div class="w-1/6">
+      <div class="h-1/3 mb-1">
+        <div class="font-semibold text-center mb-1">Saving throws</div>
+        <div class="text-xs flex ml-1">
+          <input type="checkbox" bind:checked={c.prof_st_str} />
+          <input
+            class="rounded-md border-2 mx-2 px-1 w-8"
+            type="text"
+            bind:value={c.st_str}
+          />
+          <div>Strength</div>
+        </div>
+        <div class="text-xs flex ml-1">
+          <input type="checkbox" bind:checked={c.prof_st_dex} />
+          <input
+            class="rounded-md border-2 mx-2 px-1 w-8"
+            type="text"
+            bind:value={c.st_dex}
+          />
+          <div>Dexterity</div>
+        </div>
+        <div class="text-xs flex ml-1">
+          <input type="checkbox" bind:checked={c.prof_st_con} />
+          <input
+            class="rounded-md border-2 mx-2 px-1 w-8"
+            type="text"
+            bind:value={c.st_con}
+          />
+          <div>Constitution</div>
+        </div>
+        <div class="text-xs flex ml-1">
+          <input type="checkbox" bind:checked={c.prof_st_int} />
+          <input
+            class="rounded-md border-2 mx-2 px-1 w-8"
+            type="text"
+            bind:value={c.st_int}
+          />
+          <div>Intelligence</div>
+        </div>
+        <div class="text-xs flex ml-1">
+          <input type="checkbox" bind:checked={c.prof_st_wis} />
+          <input
+            class="rounded-md border-2 mx-2 px-1 w-8"
+            type="text"
+            bind:value={c.st_wis}
+          />
+          <div>Wisdom</div>
+        </div>
+        <div class="text-xs flex ml-1">
+          <input type="checkbox" bind:checked={c.prof_st_cha} />
+          <input
+            class="rounded-md border-2 mx-2 px-1 w-8"
+            type="text"
+            bind:value={c.st_cha}
+          />
+          <div>Charisma</div>
+        </div>
+        <div>
+          <div class="text-xs font-semibold text-center mb-1">
+            Saving Throws Modifiers
+          </div>
+          <textarea class="w-full text-xs" bind:value={c.st_mods} />
+        </div>
+      </div>
+      <div class="h-2/3 mt-6">
+        <div class="font-semibold text-center">Skills</div>
         skills skills skills skills skills skills skills skills skills
       </div>
     </div>
-    <div class="w-2/6 h-96 ">
-      <div class="h-2/3 ">combat</div>
-      <div class="h-1/3 ">actions</div>
+    <div class="w-2/6">
+      <div class="h-2/3 ">
+        <div class="h-1/6 flex">
+          <div class="w-1/2 text-center border-2 mt-1">
+            <div class="font-semibold">Initiative</div>
+            <div>{compute_modifier(c.dex, 0)}</div>
+          </div>
+          <div class="w-1/2 text-center border-2 mt-1">
+            <div class="font-semibold">Armor Class</div>
+            <input class="text-center w-1/2" type="text" bind:value={c.ac} />
+          </div>
+        </div>
+        <div class="h-2/6 mb-1 border-2">
+          <div class="font-semibold text-center">
+            Resistances and Immunities
+          </div>
+          <textarea class="w-full h-1/2" bind:value={c.res} />
+        </div>
+        <div class="h-1/6 flex mt-1">
+          <div class="w-1/2 text-right pr-1">
+            <input type="checkbox" bind:value={c.inspi} />
+          </div>
+          <div class="w-1/2 text-left">Inspiration</div>
+        </div>
+        <div class="h-1/6 flex">
+          <div class="text-sm w-1/2 h-1/2 text-center">Proficiency Bonus</div>
+          <input
+            class="text-sm w-1/2 h-1/2 text-center border-2"
+            type="text"
+            bind:value={c.prof_mod}
+          />
+        </div>
+        <div class="h-1/6">init and ac</div>
+      </div>
+      <div class="h-1/3 bg-slate-200">profs and languages</div>
     </div>
-    <div class="w-2/6 h-96 ">hp and profs</div>
+    <div class="w-2/6">
+      <div class="h-1/5">
+        hp hp hp hp hp hp hp hp hp hp hp hp hp hp hp hp hp hp
+      </div>
+      <div class="h-4/5">
+        actions actions actions actions actions actions actions actions actions
+        actions actions actions actions actions actions
+      </div>
+    </div>
   </div>
   <div class="flex items-center">
     <div class="w-2/6">senses</div>
