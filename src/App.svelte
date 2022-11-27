@@ -27,6 +27,15 @@
     c.prof_st_cha = Boolean(c.prof_st_cha);
     c.ac = Number(c.ac);
     c.inspi = Boolean(c.inspi);
+    c.max_hp = Number(c.max_hp);
+    c.hp = Number(c.hp);
+    c.temp_hp = Number(c.temp_hp);
+    c.ds_s_1 = Boolean(c.ds_s_1);
+    c.ds_s_2 = Boolean(c.ds_s_2);
+    c.ds_s_3 = Boolean(c.ds_s_3);
+    c.ds_f_1 = Boolean(c.ds_f_1);
+    c.ds_f_2 = Boolean(c.ds_f_2);
+    c.ds_f_3 = Boolean(c.ds_f_3);
 
     invoke("save_character_to_file", { c: c });
   }

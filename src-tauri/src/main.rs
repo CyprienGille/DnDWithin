@@ -13,6 +13,12 @@ use std::{
 use tauri::api::dialog::blocking::FileDialogBuilder;
 
 #[derive(Deserialize, Serialize, Debug, Default)]
+struct ProfOption {
+    mult: f32,
+    text: String,
+}
+
+#[derive(Deserialize, Serialize, Debug, Default)]
 struct Character {
     name: String,
     class_level: String,
@@ -34,10 +40,39 @@ struct Character {
     prof_st_wis: bool,
     prof_st_cha: bool,
     st_mods: String,
+    acro: ProfOption,
+    anim: ProfOption,
+    arca: ProfOption,
+    athl: ProfOption,
+    dece: ProfOption,
+    hist: ProfOption,
+    insi: ProfOption,
+    inti: ProfOption,
+    inve: ProfOption,
+    medi: ProfOption,
+    natu: ProfOption,
+    perc: ProfOption,
+    perf: ProfOption,
+    pers: ProfOption,
+    reli: ProfOption,
+    slei: ProfOption,
+    stea: ProfOption,
+    surv: ProfOption,
     ac: i32,
     res: String,
     speeds: String,
     profs: String,
+    max_hp: i32,
+    hp: i32,
+    temp_hp: i32,
+    hd_total: String,
+    hd: String,
+    ds_s_1: bool,
+    ds_s_2: bool,
+    ds_s_3: bool,
+    ds_f_1: bool,
+    ds_f_2: bool,
+    ds_f_3: bool,
 }
 
 #[tauri::command]

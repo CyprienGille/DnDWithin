@@ -1,6 +1,15 @@
 <script lang="ts">
   export let c;
 
+  console.log(c.acro);
+
+  let prof_options = [
+    { mult: 0.0, text: "" },
+    { mult: 0.5, text: "H" },
+    { mult: 1.0, text: "P" },
+    { mult: 2.0, text: "E" },
+  ];
+
   function compute_modifier(score, prof_mult) {
     if (typeof prof_mult === "string") {
       if (prof_mult === "false") {
@@ -213,7 +222,242 @@
       </div>
       <div class="h-2/3 mt-6">
         <div class="font-semibold text-center">Skills</div>
-        skills skills skills skills skills skills skills skills skills
+        <div class="flex text-xs">
+          <form>
+            <select bind:value={c.acro}>
+              {#each prof_options as option}
+                <option value={option}>
+                  {option.text}
+                </option>
+              {/each}
+            </select>
+          </form>
+          <div class="rounded-md border-2 mx-1 px-1 w-8">
+            {compute_modifier(c.dex, c.acro.mult)}
+          </div>
+          <div>Acrobatics (DEX)</div>
+        </div>
+        <div class="flex text-xs">
+          <form>
+            <select bind:value={c.anim}>
+              {#each prof_options as option}
+                <option value={option}> {option.text} </option>
+              {/each}
+            </select>
+          </form>
+          <div class="rounded-md border-2 mx-1 px-1 w-8">
+            {compute_modifier(c.wis, c.anim.mult)}
+          </div>
+          <div>Animal Handling (WIS)</div>
+        </div>
+        <div class="flex text-xs">
+          <form>
+            <select bind:value={c.arca}>
+              {#each prof_options as option}
+                <option value={option}> {option.text} </option>
+              {/each}
+            </select>
+          </form>
+          <div class="rounded-md border-2 mx-1 px-1 w-8">
+            {compute_modifier(c.int, c.arca.mult)}
+          </div>
+          <div>Arcana (INT)</div>
+        </div>
+        <div class="flex text-xs">
+          <form>
+            <select bind:value={c.athl}>
+              {#each prof_options as option}
+                <option value={option}> {option.text} </option>
+              {/each}
+            </select>
+          </form>
+          <div class="rounded-md border-2 mx-1 px-1 w-8">
+            {compute_modifier(c.str, c.athl.mult)}
+          </div>
+          <div>Athletics (STR)</div>
+        </div>
+        <div class="flex text-xs">
+          <form>
+            <select bind:value={c.dece}>
+              {#each prof_options as option}
+                <option value={option}> {option.text} </option>
+              {/each}
+            </select>
+          </form>
+          <div class="rounded-md border-2 mx-1 px-1 w-8">
+            {compute_modifier(c.cha, c.dece.mult)}
+          </div>
+          <div>Deception (CHA)</div>
+        </div>
+        <div class="flex text-xs">
+          <form>
+            <select bind:value={c.hist}>
+              {#each prof_options as option}
+                <option value={option}> {option.text} </option>
+              {/each}
+            </select>
+          </form>
+          <div class="rounded-md border-2 mx-1 px-1 w-8">
+            {compute_modifier(c.int, c.hist.mult)}
+          </div>
+          <div>History (INT)</div>
+        </div>
+        <div class="flex text-xs">
+          <form>
+            <select bind:value={c.insi}>
+              {#each prof_options as option}
+                <option value={option}> {option.text} </option>
+              {/each}
+            </select>
+          </form>
+          <div class="rounded-md border-2 mx-1 px-1 w-8">
+            {compute_modifier(c.wis, c.insi.mult)}
+          </div>
+          <div>Insight (WIS)</div>
+        </div>
+        <div class="flex text-xs">
+          <form>
+            <select bind:value={c.inti}>
+              {#each prof_options as option}
+                <option value={option}> {option.text} </option>
+              {/each}
+            </select>
+          </form>
+          <div class="rounded-md border-2 mx-1 px-1 w-8">
+            {compute_modifier(c.cha, c.inti.mult)}
+          </div>
+          <div>Intimidation (CHA)</div>
+        </div>
+        <div class="flex text-xs">
+          <form>
+            <select bind:value={c.inve}>
+              {#each prof_options as option}
+                <option value={option}> {option.text} </option>
+              {/each}
+            </select>
+          </form>
+          <div class="rounded-md border-2 mx-1 px-1 w-8">
+            {compute_modifier(c.int, c.inve.mult)}
+          </div>
+          <div>Investigation (INT)</div>
+        </div>
+        <div class="flex text-xs">
+          <form>
+            <select bind:value={c.medi}>
+              {#each prof_options as option}
+                <option value={option}> {option.text} </option>
+              {/each}
+            </select>
+          </form>
+          <div class="rounded-md border-2 mx-1 px-1 w-8">
+            {compute_modifier(c.wis, c.medi.mult)}
+          </div>
+          <div>Medicine (WIS)</div>
+        </div>
+        <div class="flex text-xs">
+          <form>
+            <select bind:value={c.natu}>
+              {#each prof_options as option}
+                <option value={option}> {option.text} </option>
+              {/each}
+            </select>
+          </form>
+          <div class="rounded-md border-2 mx-1 px-1 w-8">
+            {compute_modifier(c.int, c.natu.mult)}
+          </div>
+          <div>Nature (INT)</div>
+        </div>
+        <div class="flex text-xs">
+          <form>
+            <select bind:value={c.perc}>
+              {#each prof_options as option}
+                <option value={option}> {option.text} </option>
+              {/each}
+            </select>
+          </form>
+          <div class="rounded-md border-2 mx-1 px-1 w-8">
+            {compute_modifier(c.wis, c.perc.mult)}
+          </div>
+          <div>Perception (WIS)</div>
+        </div>
+        <div class="flex text-xs">
+          <form>
+            <select bind:value={c.perf}>
+              {#each prof_options as option}
+                <option value={option}> {option.text} </option>
+              {/each}
+            </select>
+          </form>
+          <div class="rounded-md border-2 mx-1 px-1 w-8">
+            {compute_modifier(c.cha, c.perf.mult)}
+          </div>
+          <div>Performance (CHA)</div>
+        </div>
+        <div class="flex text-xs">
+          <form>
+            <select bind:value={c.pers}>
+              {#each prof_options as option}
+                <option value={option}> {option.text} </option>
+              {/each}
+            </select>
+          </form>
+          <div class="rounded-md border-2 mx-1 px-1 w-8">
+            {compute_modifier(c.cha, c.pers.mult)}
+          </div>
+          <div>Persuasion (CHA)</div>
+        </div>
+        <div class="flex text-xs">
+          <form>
+            <select bind:value={c.reli}>
+              {#each prof_options as option}
+                <option value={option}> {option.text} </option>
+              {/each}
+            </select>
+          </form>
+          <div class="rounded-md border-2 mx-1 px-1 w-8">
+            {compute_modifier(c.int, c.reli.mult)}
+          </div>
+          <div>Religion (INT)</div>
+        </div>
+        <div class="flex text-xs">
+          <form>
+            <select bind:value={c.slei}>
+              {#each prof_options as option}
+                <option value={option}> {option.text} </option>
+              {/each}
+            </select>
+          </form>
+          <div class="rounded-md border-2 mx-1 px-1 w-8">
+            {compute_modifier(c.dex, c.slei.mult)}
+          </div>
+          <div>Sleight of Hand (DEX)</div>
+        </div>
+        <div class="flex text-xs">
+          <form>
+            <select bind:value={c.stea}>
+              {#each prof_options as option}
+                <option value={option}> {option.text} </option>
+              {/each}
+            </select>
+          </form>
+          <div class="rounded-md border-2 mx-1 px-1 w-8">
+            {compute_modifier(c.dex, c.stea.mult)}
+          </div>
+          <div>Stealth (DEX)</div>
+        </div>
+        <div class="flex text-xs">
+          <form>
+            <select bind:value={c.surv}>
+              {#each prof_options as option}
+                <option value={option}> {option.text} </option>
+              {/each}
+            </select>
+          </form>
+          <div class="rounded-md border-2 mx-1 px-1 w-8">
+            {compute_modifier(c.wis, c.surv.mult)}
+          </div>
+          <div>Survival (WIS)</div>
+        </div>
       </div>
     </div>
     <div class="w-2/6">
@@ -230,7 +474,7 @@
         </div>
         <div class="h-2/6 mb-1 border-2">
           <div class="font-semibold text-center">Resistances & Immunities</div>
-          <textarea class="w-full text-sm h-1/2" bind:value={c.res} />
+          <textarea class="w-full text-sm h-2/3" bind:value={c.res} />
         </div>
         <div class="h-1/6 flex mt-1">
           <div class="w-1/2 text-right pr-1">
@@ -260,8 +504,49 @@
       </div>
     </div>
     <div class="w-2/6">
-      <div class="h-1/5">
-        hp hp hp hp hp hp hp hp hp hp hp hp hp hp hp hp hp hp
+      <div class="h-1/5 mb-4">
+        <div class="h-1/2 flex">
+          <div class="w-1/3">
+            <div class="font-semibold pl-1">Max HP</div>
+            <input
+              class="w-full text-center"
+              type="text"
+              bind:value={c.max_hp}
+            />
+          </div>
+          <div class="w-1/3">
+            <div class="font-semibold pl-1">Current HP</div>
+
+            <input class="w-full text-center" type="text" bind:value={c.hp} />
+          </div>
+          <div class="w-1/3">
+            <div class="font-semibold pl-1">Temp HP</div>
+
+            <input
+              class="w-full text-center"
+              type="text"
+              bind:value={c.temp_hp}
+            />
+          </div>
+        </div>
+        <div class="h-1/2 flex">
+          <div class="w-1/2">
+            <div class="font-semibold">Hit Dice</div>
+            <div class="text-sm flex">
+              <div class="w-1/2">Total</div>
+              <input
+                class="w-1/2 border-2"
+                type="text"
+                bind:value={c.hd_total}
+              />
+            </div>
+            <div class="text-sm flex">
+              <div class="w-1/2">Used</div>
+              <input class="w-1/2 border-2" type="text" bind:value={c.hd} />
+            </div>
+          </div>
+          <div class="w-1/2">death saves</div>
+        </div>
       </div>
       <div class="h-4/5">
         actions actions actions actions actions actions actions actions actions
