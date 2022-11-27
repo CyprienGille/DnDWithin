@@ -478,7 +478,7 @@
         </div>
         <div class="h-1/6 flex mt-1">
           <div class="w-1/2 text-right pr-1">
-            <input type="checkbox" bind:value={c.inspi} />
+            <input type="checkbox" bind:checked={c.inspi} />
           </div>
           <div class="w-1/2 text-left">Inspiration</div>
         </div>
@@ -533,7 +533,7 @@
           <div class="w-1/2">
             <div class="font-semibold">Hit Dice</div>
             <div class="text-sm flex">
-              <div class="w-1/2">Total</div>
+              <div class="w-1/2 text-center">Total</div>
               <input
                 class="w-1/2 border-2"
                 type="text"
@@ -541,16 +541,30 @@
               />
             </div>
             <div class="text-sm flex">
-              <div class="w-1/2">Used</div>
+              <div class="w-1/2 text-center">Used</div>
               <input class="w-1/2 border-2" type="text" bind:value={c.hd} />
             </div>
           </div>
-          <div class="w-1/2">death saves</div>
+          <div class="w-1/2">
+            <div class="h-1/3 font-semibold">Death Saves</div>
+            <div class="h-1/3 flex">
+              <div class="w-1/4 text-sm ml-1">Success</div>
+              <input class="w-1/4" type="checkbox" bind:checked={c.ds_s_1} />
+              <input class="w-1/4" type="checkbox" bind:checked={c.ds_s_2} />
+              <input class="w-1/4" type="checkbox" bind:checked={c.ds_s_3} />
+            </div>
+            <div class="h-1/3 flex">
+              <div class="w-1/4 text-sm ml-1">Failure</div>
+              <input class="w-1/4" type="checkbox" bind:checked={c.ds_f_1} />
+              <input class="w-1/4" type="checkbox" bind:checked={c.ds_f_2} />
+              <input class="w-1/4" type="checkbox" bind:checked={c.ds_f_3} />
+            </div>
+          </div>
         </div>
       </div>
-      <div class="h-4/5">
-        actions actions actions actions actions actions actions actions actions
-        actions actions actions actions actions actions
+      <div class="h-4/5 bg-slate-300">
+        <div class="font-semibold text-center">Actions & Reactions</div>
+        <textarea class="h-full w-full bg-slate-300" bind:value={c.actions} />
       </div>
     </div>
   </div>

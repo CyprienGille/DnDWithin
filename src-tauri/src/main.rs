@@ -73,6 +73,7 @@ struct Character {
     ds_f_1: bool,
     ds_f_2: bool,
     ds_f_3: bool,
+    actions: String,
 }
 
 #[tauri::command]
