@@ -570,6 +570,7 @@
   </div>
   <div class="flex items-center">
     <div class="w-2/6 border-2">
+      <div class="text-center font-semibold">Senses</div>
       <div class="h-1/5 flex">
         <div class="w-1/4 text-center">
           {10 + Number(compute_modifier(c.wis, c.perc.mult))}
@@ -593,6 +594,7 @@
       </div>
     </div>
     <div class="w-4/6">
+      <div class="text-center font-semibold">Attacks & Cantrips</div>
       <div class="flex font-semibold h-full">
         <div class="w-4/12">NAME</div>
         <div class="w-1/12">HIT</div>
