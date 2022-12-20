@@ -1,6 +1,6 @@
 [package]
 name = "app"
-version = "0.1.0"
+version = "0.2.0"
 description = "An Editable DND 5E Character Sheet"
 authors = ["CyprienGille"]
 license = ""
@@ -15,9 +15,9 @@ rust-version = "1.59"
 tauri-build = { version = "1.2.1", features = [] }
 
 [dependencies]
-serde_json = "1.0"
-serde = { version = "1.0", features = ["derive"] }
-tauri = { version = "1.2.1", features = ["dialog-all"] }
+serde_json = "1.0.91"
+serde = { version = "1.0.151", features = ["derive"] }
+tauri = { version = "1.2.2", features = ["dialog-all"] }
 
 [features]
 # by default Tauri runs in production mode
