@@ -13,6 +13,14 @@ use std::{
 use tauri::api::dialog::blocking::FileDialogBuilder;
 
 #[derive(Deserialize, Serialize, Debug, Default)]
+struct Atk {
+    name: String,
+    dmg: String,
+    hit: String,
+    notes: String,
+}
+
+#[derive(Deserialize, Serialize, Debug, Default)]
 struct ProfOption {
     mult: f32,
     text: String,
@@ -75,30 +83,12 @@ struct Character {
     ds_f_3: bool,
     actions: String,
     senses: String,
-    atk_name_1: String,
-    atk_hit_1: String,
-    atk_dmg_1: String,
-    atk_notes_1: String,
-    atk_name_2: String,
-    atk_hit_2: String,
-    atk_dmg_2: String,
-    atk_notes_2: String,
-    atk_name_3: String,
-    atk_hit_3: String,
-    atk_dmg_3: String,
-    atk_notes_3: String,
-    atk_name_4: String,
-    atk_hit_4: String,
-    atk_dmg_4: String,
-    atk_notes_4: String,
-    atk_name_5: String,
-    atk_hit_5: String,
-    atk_dmg_5: String,
-    atk_notes_5: String,
-    atk_name_6: String,
-    atk_hit_6: String,
-    atk_dmg_6: String,
-    atk_notes_6: String,
+    atk_1: Atk,
+    atk_2: Atk,
+    atk_3: Atk,
+    atk_4: Atk,
+    atk_5: Atk,
+    atk_6: Atk,
 }
 
 #[tauri::command]

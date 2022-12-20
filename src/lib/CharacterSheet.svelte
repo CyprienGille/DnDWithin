@@ -603,86 +603,86 @@
       </div>
       <div class="flex h-full">
         <div class="w-4/12">
-          <textarea class="w-full" bind:value={c.atk_name_1} />
+          <textarea class="w-full" bind:value={c.atk_1.name} />
         </div>
         <div class="w-1/12">
-          <textarea class="w-full" bind:value={c.atk_hit_1} />
+          <textarea class="w-full" bind:value={c.atk_1.hit} />
         </div>
         <div class="w-4/12">
-          <textarea class="w-full" bind:value={c.atk_dmg_1} />
+          <textarea class="w-full" bind:value={c.atk_1.dmg} />
         </div>
         <div class="w-3/12">
-          <textarea class="w-full" bind:value={c.atk_notes_1} />
+          <textarea class="w-full" bind:value={c.atk_1.notes} />
         </div>
       </div>
       <div class="flex h-full">
         <div class="w-4/12">
-          <textarea class="w-full" bind:value={c.atk_name_2} />
+          <textarea class="w-full" bind:value={c.atk_2.name} />
         </div>
         <div class="w-1/12">
-          <textarea class="w-full" bind:value={c.atk_hit_2} />
+          <textarea class="w-full" bind:value={c.atk_2.hit} />
         </div>
         <div class="w-4/12">
-          <textarea class="w-full" bind:value={c.atk_dmg_2} />
+          <textarea class="w-full" bind:value={c.atk_2.dmg} />
         </div>
         <div class="w-3/12">
-          <textarea class="w-full" bind:value={c.atk_notes_2} />
+          <textarea class="w-full" bind:value={c.atk_2.notes} />
         </div>
       </div>
       <div class="flex h-full">
         <div class="w-4/12">
-          <textarea class="w-full" bind:value={c.atk_name_3} />
+          <textarea class="w-full" bind:value={c.atk_3.name} />
         </div>
         <div class="w-1/12">
-          <textarea class="w-full" bind:value={c.atk_hit_3} />
+          <textarea class="w-full" bind:value={c.atk_3.hit} />
         </div>
         <div class="w-4/12">
-          <textarea class="w-full" bind:value={c.atk_dmg_3} />
+          <textarea class="w-full" bind:value={c.atk_3.dmg} />
         </div>
         <div class="w-3/12">
-          <textarea class="w-full" bind:value={c.atk_notes_3} />
+          <textarea class="w-full" bind:value={c.atk_3.notes} />
         </div>
       </div>
       <div class="flex h-full">
         <div class="w-4/12">
-          <textarea class="w-full" bind:value={c.atk_name_4} />
+          <textarea class="w-full" bind:value={c.atk_4.name} />
         </div>
         <div class="w-1/12">
-          <textarea class="w-full" bind:value={c.atk_hit_4} />
+          <textarea class="w-full" bind:value={c.atk_4.hit} />
         </div>
         <div class="w-4/12">
-          <textarea class="w-full" bind:value={c.atk_dmg_4} />
+          <textarea class="w-full" bind:value={c.atk_4.dmg} />
         </div>
         <div class="w-3/12">
-          <textarea class="w-full" bind:value={c.atk_notes_4} />
+          <textarea class="w-full" bind:value={c.atk_4.notes} />
         </div>
       </div>
       <div class="flex h-full">
         <div class="w-4/12">
-          <textarea class="w-full" bind:value={c.atk_name_5} />
+          <textarea class="w-full" bind:value={c.atk_5.name} />
         </div>
         <div class="w-1/12">
-          <textarea class="w-full" bind:value={c.atk_hit_5} />
+          <textarea class="w-full" bind:value={c.atk_5.hit} />
         </div>
         <div class="w-4/12">
-          <textarea class="w-full" bind:value={c.atk_dmg_5} />
+          <textarea class="w-full" bind:value={c.atk_5.dmg} />
         </div>
         <div class="w-3/12">
-          <textarea class="w-full" bind:value={c.atk_notes_5} />
+          <textarea class="w-full" bind:value={c.atk_5.notes} />
         </div>
       </div>
       <div class="flex h-full">
         <div class="w-4/12">
-          <textarea class="w-full" bind:value={c.atk_name_6} />
+          <textarea class="w-full" bind:value={c.atk_6.name} />
         </div>
         <div class="w-1/12">
-          <textarea class="w-full" bind:value={c.atk_hit_6} />
+          <textarea class="w-full" bind:value={c.atk_6.hit} />
         </div>
         <div class="w-4/12">
-          <textarea class="w-full" bind:value={c.atk_dmg_6} />
+          <textarea class="w-full" bind:value={c.atk_6.dmg} />
         </div>
         <div class="w-3/12">
-          <textarea class="w-full" bind:value={c.atk_notes_6} />
+          <textarea class="w-full" bind:value={c.atk_6.notes} />
         </div>
       </div>
     </div>
