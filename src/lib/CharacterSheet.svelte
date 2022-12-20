@@ -783,7 +783,24 @@
           </div>
         </div>
       </div>
-      <div class="w-5/12">a</div>
+      <div class="w-5/12">
+        <div class="flex">
+          <div class="w-8/12 font-semibold">Name</div>
+          <div class="w-2/12 font-semibold">Quantity</div>
+          <div class="w-2/12 font-semibold">Weight</div>
+        </div>
+        <div class="flex">
+          <div class="w-8/12">
+            <input type="text" bind:value={c.eq_1.name} />
+          </div>
+          <div class="w-2/12">
+            <input type="number" bind:value={c.eq_1.qty} />
+          </div>
+          <div class="w-2/12">
+            <input type="text" bind:value={c.eq_1.w} />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="w-full text-center">Characteristics</div>
