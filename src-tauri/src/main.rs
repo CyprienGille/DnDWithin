@@ -92,6 +92,11 @@ struct Character {
     features_1: String,
     features_2: String,
     features_3: String,
+    cp: i32,
+    sp: i32,
+    ep: i32,
+    gp: i32,
+    pp: i32,
 }
 
 #[tauri::command]

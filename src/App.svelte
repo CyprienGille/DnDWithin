@@ -36,6 +36,11 @@
     c.ds_f_1 = Boolean(c.ds_f_1);
     c.ds_f_2 = Boolean(c.ds_f_2);
     c.ds_f_3 = Boolean(c.ds_f_3);
+    c.cp = Number(c.cp);
+    c.sp = Number(c.sp);
+    c.ep = Number(c.ep);
+    c.gp = Number(c.gp);
+    c.pp = Number(c.pp);
 
     invoke("save_character_to_file", { c: c });
   }
