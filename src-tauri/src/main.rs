@@ -89,6 +89,9 @@ struct Character {
     atk_4: Atk,
     atk_5: Atk,
     atk_6: Atk,
+    features_1: String,
+    features_2: String,
+    features_3: String,
 }
 
 #[tauri::command]

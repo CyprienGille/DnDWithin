@@ -687,7 +687,29 @@
       </div>
     </div>
   </div>
-  <div class="w-full text-center">Features and traits</div>
+  <div class="w-full border-2">
+    <div class="text-center font-semibold">Features & Traits</div>
+    <div class="flex">
+      <div class="w-1/3">
+        <textarea
+          class="w-full pb-48 h-full text-sm"
+          bind:value={c.features_1}
+        />
+      </div>
+      <div class="w-1/3">
+        <textarea
+          class="w-full pb-48 h-full text-sm"
+          bind:value={c.features_2}
+        />
+      </div>
+      <div class="w-1/3">
+        <textarea
+          class="w-full pb-48 h-full text-sm"
+          bind:value={c.features_3}
+        />
+      </div>
+    </div>
+  </div>
   <div class="w-full text-center">Equipment</div>
   <div class="w-full text-center">Characteristics</div>
   <div class="flex text-center">

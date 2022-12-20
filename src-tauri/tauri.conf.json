@@ -61,7 +61,7 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 900,
+        "height": 800,
         "resizable": true,
         "title": "DnDWithin",
         "width": 1200
