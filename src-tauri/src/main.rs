@@ -14,7 +14,7 @@ use tauri::api::dialog::blocking::FileDialogBuilder;
 
 #[derive(Deserialize, Serialize, Debug, Default)]
 struct Spell {
-    prep: bool,
+    prep: String,
     name: String,
     save: String,
     time: String,
@@ -211,24 +211,12 @@ fn save_character_to_file(c: Character) {
     );
 }
 
-#[tauri::command]
-async fn create_window(handle: tauri::AppHandle) {
-    let _local_window = tauri::WindowBuilder::new(
-        &handle,
-        "external", /* the unique window label */
-        tauri::WindowUrl::App("index.html".into()),
-    )
-    .build()
-    .unwrap();
-}
-
 fn main() {
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![
             open_file,
             get_default,
-            save_character_to_file,
-            create_window
+            save_character_to_file
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

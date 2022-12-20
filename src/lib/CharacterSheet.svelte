@@ -1,6 +1,9 @@
 <script lang="ts">
   export let c;
-  import { invoke } from "@tauri-apps/api/tauri";
+
+  let adding_spell = false;
+
+  let new_spell;
 
   let prof_options = [
     { mult: 0.0, text: "" },
@@ -30,8 +33,30 @@
       Math.floor((score - 10) / 2) + Math.floor(prof_mult * c.prof_mod);
     return (num >= 0 ? "+" : "") + num;
   }
-  function create_window() {
-    invoke("create_window");
+
+  function init_new_spell() {
+    new_spell = {
+      prep: "N",
+      name: "Name",
+      save: "DEX 10",
+      time: "1A",
+      range: "Touch",
+      comp: "VSM",
+      duration: "Instant",
+      page_ref: "PHB 255",
+      notes: "Ritual",
+    };
+  }
+
+  function open_spell_creation() {
+    init_new_spell();
+    adding_spell = true;
+  }
+
+  function close_spell_creation() {
+    c.spells.push(JSON.parse(JSON.stringify(new_spell)));
+    c.spells = c.spells;
+    adding_spell = false;
   }
 </script>
 
@@ -1218,7 +1243,7 @@
     <div class="w-1/12">Page Ref</div>
     <div class="w-1/12">Notes</div>
   </div>
-  {#each c.spells as spell}
+  {#each c.spells as spell (spell.name)}
     <div class="flex">
       <div class="w-1/12">{spell.prep}</div>
       <div class="w-3/12">{spell.name}</div>
@@ -1231,10 +1256,50 @@
       <div class="w-1/12">{spell.notes}</div>
     </div>
   {/each}
-  <div class="text-center">
-    <button
-      class="w-full text-lg bg-blue-200 text-slate-900 p-2 hover:bg-teal-400"
-      on:click={() => create_window()}>Add Spell</button
-    >
-  </div>
+
+  {#if adding_spell}
+    <div class="flex border-2">
+      <div class="w-1/12">
+        <input class="w-full" type="text" bind:value={new_spell.prep} />
+      </div>
+      <div class="w-3/12">
+        <input class="w-full" type="text" bind:value={new_spell.name} />
+      </div>
+      <div class="w-1/12">
+        <input class="w-full" type="text" bind:value={new_spell.save} />
+      </div>
+      <div class="w-1/12">
+        <input class="w-full" type="text" bind:value={new_spell.time} />
+      </div>
+      <div class="w-1/12">
+        <input class="w-full" type="text" bind:value={new_spell.range} />
+      </div>
+      <div class="w-1/12">
+        <input class="w-full" type="text" bind:value={new_spell.comp} />
+      </div>
+      <div class="w-1/12">
+        <input class="w-full" type="text" bind:value={new_spell.duration} />
+      </div>
+      <div class="w-1/12">
+        <input class="w-full" type="text" bind:value={new_spell.page_ref} />
+      </div>
+      <div class="w-1/12">
+        <input class="w-full" type="text" bind:value={new_spell.notes} />
+      </div>
+    </div>
+
+    <div class="text-center">
+      <button
+        class="w-full text-lg bg-blue-200 text-slate-900 p-2 hover:bg-teal-400"
+        on:click={() => close_spell_creation()}>Done</button
+      >
+    </div>
+  {:else}
+    <div class="text-center">
+      <button
+        class="w-full text-lg bg-blue-200 text-slate-900 p-2 hover:bg-teal-400"
+        on:click={() => open_spell_creation()}>Add Spell</button
+      >
+    </div>
+  {/if}
 </main>
