@@ -34,7 +34,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.dndw.dev",
+      "identifier": "com.ddw.dev",
       "longDescription": "",
       "macOS": {
         "entitlements": null,

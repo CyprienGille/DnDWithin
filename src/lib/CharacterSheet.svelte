@@ -1,8 +1,6 @@
 <script lang="ts">
   export let c;
 
-  console.log(c.acro);
-
   let prof_options = [
     { mult: 0.0, text: "" },
     { mult: 0.5, text: "H" },
@@ -765,7 +763,7 @@
           </div>
         </div>
       </div>
-      <div class="w-5/12">
+      <div class="w-5/12 border-2">
         <div class="flex">
           <div class="w-8/12 font-semibold">Name</div>
           <div class="w-2/12 font-semibold">Quantity</div>
@@ -776,14 +774,168 @@
             <input type="text" bind:value={c.eq_1.name} />
           </div>
           <div class="w-2/12">
-            <input type="number" bind:value={c.eq_1.qty} />
+            <input class="w-full" type="number" bind:value={c.eq_1.qty} />
           </div>
           <div class="w-2/12">
-            <input type="text" bind:value={c.eq_1.w} />
+            <input class="w-full" type="text" bind:value={c.eq_1.w} />
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-8/12">
+            <input type="text" bind:value={c.eq_2.name} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="number" bind:value={c.eq_2.qty} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="text" bind:value={c.eq_2.w} />
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-8/12">
+            <input type="text" bind:value={c.eq_3.name} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="number" bind:value={c.eq_3.qty} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="text" bind:value={c.eq_3.w} />
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-8/12">
+            <input type="text" bind:value={c.eq_4.name} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="number" bind:value={c.eq_4.qty} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="text" bind:value={c.eq_4.w} />
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-8/12">
+            <input type="text" bind:value={c.eq_5.name} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="number" bind:value={c.eq_5.qty} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="text" bind:value={c.eq_5.w} />
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-8/12">
+            <input type="text" bind:value={c.eq_6.name} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="number" bind:value={c.eq_6.qty} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="text" bind:value={c.eq_6.w} />
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-8/12">
+            <input type="text" bind:value={c.eq_7.name} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="number" bind:value={c.eq_7.qty} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="text" bind:value={c.eq_7.w} />
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-8/12">
+            <input type="text" bind:value={c.eq_8.name} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="number" bind:value={c.eq_8.qty} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="text" bind:value={c.eq_8.w} />
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-8/12">
+            <input type="text" bind:value={c.eq_9.name} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="number" bind:value={c.eq_9.qty} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="text" bind:value={c.eq_9.w} />
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-8/12">
+            <input type="text" bind:value={c.eq_10.name} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="number" bind:value={c.eq_10.qty} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="text" bind:value={c.eq_10.w} />
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-8/12">
+            <input type="text" bind:value={c.eq_11.name} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="number" bind:value={c.eq_11.qty} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="text" bind:value={c.eq_11.w} />
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-8/12">
+            <input type="text" bind:value={c.eq_12.name} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="number" bind:value={c.eq_12.qty} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="text" bind:value={c.eq_12.w} />
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-8/12">
+            <input type="text" bind:value={c.eq_13.name} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="number" bind:value={c.eq_13.qty} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="text" bind:value={c.eq_13.w} />
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-8/12">
+            <input type="text" bind:value={c.eq_14.name} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="number" bind:value={c.eq_14.qty} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="text" bind:value={c.eq_14.w} />
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-8/12">
+            <input type="text" bind:value={c.eq_15.name} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="number" bind:value={c.eq_15.qty} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="text" bind:value={c.eq_15.w} />
           </div>
         </div>
       </div>
-      <div class="w-5/12">
+      <div class="w-5/12 border-2">
         <div class="flex">
           <div class="w-8/12 font-semibold">Name</div>
           <div class="w-2/12 font-semibold">Quantity</div>
@@ -791,23 +943,222 @@
         </div>
         <div class="flex">
           <div class="w-8/12">
-            <input type="text" bind:value={c.eq_1.name} />
+            <input type="text" bind:value={c.eq_16.name} />
           </div>
           <div class="w-2/12">
-            <input type="number" bind:value={c.eq_1.qty} />
+            <input class="w-full" type="number" bind:value={c.eq_16.qty} />
           </div>
           <div class="w-2/12">
-            <input type="text" bind:value={c.eq_1.w} />
+            <input class="w-full" type="text" bind:value={c.eq_16.w} />
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-8/12">
+            <input type="text" bind:value={c.eq_17.name} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="number" bind:value={c.eq_17.qty} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="text" bind:value={c.eq_17.w} />
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-8/12">
+            <input type="text" bind:value={c.eq_18.name} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="number" bind:value={c.eq_18.qty} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="text" bind:value={c.eq_18.w} />
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-8/12">
+            <input type="text" bind:value={c.eq_19.name} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="number" bind:value={c.eq_19.qty} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="text" bind:value={c.eq_19.w} />
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-8/12">
+            <input type="text" bind:value={c.eq_20.name} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="number" bind:value={c.eq_20.qty} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="text" bind:value={c.eq_20.w} />
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-8/12">
+            <input type="text" bind:value={c.eq_21.name} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="number" bind:value={c.eq_21.qty} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="text" bind:value={c.eq_21.w} />
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-8/12">
+            <input type="text" bind:value={c.eq_22.name} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="number" bind:value={c.eq_22.qty} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="text" bind:value={c.eq_22.w} />
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-8/12">
+            <input type="text" bind:value={c.eq_23.name} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="number" bind:value={c.eq_23.qty} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="text" bind:value={c.eq_23.w} />
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-8/12">
+            <input type="text" bind:value={c.eq_24.name} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="number" bind:value={c.eq_24.qty} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="text" bind:value={c.eq_24.w} />
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-8/12">
+            <input type="text" bind:value={c.eq_25.name} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="number" bind:value={c.eq_25.qty} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="text" bind:value={c.eq_25.w} />
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-8/12">
+            <input type="text" bind:value={c.eq_26.name} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="number" bind:value={c.eq_26.qty} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="text" bind:value={c.eq_26.w} />
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-8/12">
+            <input type="text" bind:value={c.eq_27.name} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="number" bind:value={c.eq_27.qty} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="text" bind:value={c.eq_27.w} />
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-8/12">
+            <input type="text" bind:value={c.eq_28.name} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="number" bind:value={c.eq_28.qty} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="text" bind:value={c.eq_28.w} />
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-8/12">
+            <input type="text" bind:value={c.eq_29.name} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="number" bind:value={c.eq_29.qty} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="text" bind:value={c.eq_29.w} />
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-8/12">
+            <input type="text" bind:value={c.eq_30.name} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="number" bind:value={c.eq_30.qty} />
+          </div>
+          <div class="w-2/12">
+            <input class="w-full" type="text" bind:value={c.eq_30.w} />
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="w-full text-center">Characteristics</div>
-  <div class="flex text-center">
-    <div class="w-1/3">Appearance</div>
-    <div class="w-1/3">Allies and Factions</div>
-    <div class="w-1/3">Traits ideals bonds and flaws</div>
+  <div class="w-full text-center border-2">
+    <div class="font-semibold">Characteristics</div>
+    <div class="flex">
+      <div class="w-1/5">Gender</div>
+      <div class="w-1/5">Age</div>
+      <div class="w-1/5">Size</div>
+      <div class="w-1/5">Height</div>
+      <div class="w-1/5">Weight</div>
+    </div>
+    <div class="flex">
+      <textarea class="w-1/5" bind:value={c.gender} />
+      <textarea class="w-1/5" bind:value={c.age} />
+      <textarea class="w-1/5" bind:value={c.size} />
+      <textarea class="w-1/5" bind:value={c.height} />
+      <textarea class="w-1/5" bind:value={c.weight} />
+    </div>
+    <div class="flex">
+      <div class="w-1/5">Alignment</div>
+      <div class="w-1/5">Faith</div>
+      <div class="w-1/5">Skin</div>
+      <div class="w-1/5">Eyes</div>
+      <div class="w-1/5">Hair</div>
+    </div>
+    <div class="flex">
+      <textarea class="w-1/5" bind:value={c.alig} />
+      <textarea class="w-1/5" bind:value={c.faith} />
+      <textarea class="w-1/5" bind:value={c.skin} />
+      <textarea class="w-1/5" bind:value={c.eyes} />
+      <textarea class="w-1/5" bind:value={c.hair} />
+    </div>
+  </div>
+  <div class="flex text-center border-2">
+    <div class="w-1/3">
+      <div class="font-semibold">Appearance</div>
+      <textarea class="w-full" rows="15" bind:value={c.appearance} />
+    </div>
+    <div class="w-1/3">
+      <div class="font-semibold">Allies and Organizations</div>
+      <textarea class="w-full" rows="15" bind:value={c.allies} />
+    </div>
+    <div class="w-1/3">
+      <div class="font-semibold">Personality Traits</div>
+      <textarea class="w-full" rows="3" bind:value={c.p_traits} />
+      <div class="font-semibold">Ideals</div>
+      <textarea class="w-full" rows="3" bind:value={c.ideals} />
+      <div class="font-semibold">Bonds</div>
+      <textarea class="w-full" rows="3" bind:value={c.bonds} />
+      <div class="font-semibold">Flaws</div>
+      <textarea class="w-full" rows="3" bind:value={c.flaws} />
+    </div>
   </div>
   <div class="flex text-center">
     <div class="w-1/3">Backstory</div>

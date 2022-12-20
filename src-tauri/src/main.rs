@@ -13,6 +13,13 @@ use std::{
 use tauri::api::dialog::blocking::FileDialogBuilder;
 
 #[derive(Deserialize, Serialize, Debug, Default)]
+struct Equipment {
+    name: String,
+    qty: i32,
+    w: String,
+}
+
+#[derive(Deserialize, Serialize, Debug, Default)]
 struct Atk {
     name: String,
     dmg: String,
@@ -97,6 +104,46 @@ struct Character {
     ep: i32,
     gp: i32,
     pp: i32,
+    eq_1: Equipment,
+    eq_2: Equipment,
+    eq_3: Equipment,
+    eq_4: Equipment,
+    eq_5: Equipment,
+    eq_6: Equipment,
+    eq_7: Equipment,
+    eq_8: Equipment,
+    eq_9: Equipment,
+    eq_10: Equipment,
+    eq_11: Equipment,
+    eq_12: Equipment,
+    eq_13: Equipment,
+    eq_14: Equipment,
+    eq_15: Equipment,
+    eq_16: Equipment,
+    eq_17: Equipment,
+    eq_18: Equipment,
+    eq_19: Equipment,
+    eq_20: Equipment,
+    eq_21: Equipment,
+    eq_22: Equipment,
+    eq_23: Equipment,
+    eq_24: Equipment,
+    eq_25: Equipment,
+    eq_26: Equipment,
+    eq_27: Equipment,
+    eq_28: Equipment,
+    eq_29: Equipment,
+    eq_30: Equipment,
+    gender: String,
+    age: String,
+    size: String,
+    height: String,
+    weight: String,
+    alig: String,
+    faith: String,
+    skin: String,
+    eyes: String,
+    hair: String,
 }
 
 #[tauri::command]

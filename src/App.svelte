@@ -41,6 +41,36 @@
     c.ep = Number(c.ep);
     c.gp = Number(c.gp);
     c.pp = Number(c.pp);
+    c.eq_1.qty = Number(c.eq_1.qty);
+    c.eq_2.qty = Number(c.eq_2.qty);
+    c.eq_3.qty = Number(c.eq_3.qty);
+    c.eq_4.qty = Number(c.eq_4.qty);
+    c.eq_5.qty = Number(c.eq_5.qty);
+    c.eq_6.qty = Number(c.eq_6.qty);
+    c.eq_7.qty = Number(c.eq_7.qty);
+    c.eq_8.qty = Number(c.eq_8.qty);
+    c.eq_9.qty = Number(c.eq_9.qty);
+    c.eq_10.qty = Number(c.eq_10.qty);
+    c.eq_11.qty = Number(c.eq_11.qty);
+    c.eq_12.qty = Number(c.eq_12.qty);
+    c.eq_13.qty = Number(c.eq_13.qty);
+    c.eq_14.qty = Number(c.eq_14.qty);
+    c.eq_15.qty = Number(c.eq_15.qty);
+    c.eq_16.qty = Number(c.eq_16.qty);
+    c.eq_17.qty = Number(c.eq_17.qty);
+    c.eq_18.qty = Number(c.eq_18.qty);
+    c.eq_19.qty = Number(c.eq_19.qty);
+    c.eq_20.qty = Number(c.eq_20.qty);
+    c.eq_21.qty = Number(c.eq_21.qty);
+    c.eq_22.qty = Number(c.eq_22.qty);
+    c.eq_23.qty = Number(c.eq_23.qty);
+    c.eq_24.qty = Number(c.eq_24.qty);
+    c.eq_25.qty = Number(c.eq_25.qty);
+    c.eq_26.qty = Number(c.eq_26.qty);
+    c.eq_27.qty = Number(c.eq_27.qty);
+    c.eq_28.qty = Number(c.eq_28.qty);
+    c.eq_29.qty = Number(c.eq_29.qty);
+    c.eq_30.qty = Number(c.eq_30.qty);
 
     invoke("save_character_to_file", { c: c });
   }
