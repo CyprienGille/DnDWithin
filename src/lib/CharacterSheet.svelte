@@ -717,31 +717,51 @@
         <div class="h-1/5 flex">
           <div class="w-1/2">Copper</div>
           <div class="w-1/2">
-            <input type="number" bind:value={c.cp} />
+            <input
+              class="w-11/12 text-center"
+              type="number"
+              bind:value={c.cp}
+            />
           </div>
         </div>
         <div class="h-1/5 flex">
           <div class="w-1/2">Silver</div>
           <div class="w-1/2">
-            <input type="number" bind:value={c.sp} />
+            <input
+              class="w-11/12 text-center"
+              type="number"
+              bind:value={c.sp}
+            />
           </div>
         </div>
         <div class="h-1/5 flex">
           <div class="w-1/2">Electrum</div>
           <div class="w-1/2">
-            <input type="number" bind:value={c.ep} />
+            <input
+              class="w-11/12 text-center"
+              type="number"
+              bind:value={c.ep}
+            />
           </div>
         </div>
         <div class="h-1/5 flex">
           <div class="w-1/2">Gold</div>
           <div class="w-1/2">
-            <input type="number" bind:value={c.gp} />
+            <input
+              class="w-11/12 text-center"
+              type="number"
+              bind:value={c.gp}
+            />
           </div>
         </div>
         <div class="h-1/5 flex">
           <div class="w-1/2">Platinum</div>
           <div class="w-1/2">
-            <input type="number" bind:value={c.pp} />
+            <input
+              class="w-11/12 text-center"
+              type="number"
+              bind:value={c.pp}
+            />
           </div>
         </div>
       </div>
