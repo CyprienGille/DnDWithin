@@ -1,11 +1,21 @@
 <script lang="ts">
   export let c;
+  import { invoke } from "@tauri-apps/api/tauri";
 
   let prof_options = [
     { mult: 0.0, text: "" },
     { mult: 0.5, text: "H" },
     { mult: 1.0, text: "P" },
     { mult: 2.0, text: "E" },
+  ];
+
+  let ab_options = [
+    "Strength",
+    "Dexterity",
+    "Constitution",
+    "Intelligence",
+    "Wisdom",
+    "Charisma",
   ];
 
   function compute_modifier(score, prof_mult) {
@@ -19,6 +29,9 @@
     const num =
       Math.floor((score - 10) / 2) + Math.floor(prof_mult * c.prof_mod);
     return (num >= 0 ? "+" : "") + num;
+  }
+  function create_window() {
+    invoke("create_window");
   }
 </script>
 
@@ -1161,9 +1174,67 @@
     </div>
   </div>
   <div class="flex text-center">
-    <div class="w-1/3">Backstory</div>
-    <div class="w-2/3">Notes</div>
+    <div class="w-1/3 border-2">
+      <div class="font-semibold">Backstory</div>
+      <textarea class="w-full" rows="20" bind:value={c.backstory} />
+    </div>
+    <div class="w-2/3 border-2">
+      <div class="font-semibold">Notes</div>
+      <div class="flex">
+        <textarea class="w-1/2" rows="20" bind:value={c.notes_1} />
+        <textarea class="w-1/2" rows="20" bind:value={c.notes_2} />
+      </div>
+    </div>
   </div>
-  <div>Spellcasting numbers</div>
-  <div>Spells</div>
+  <div class="flex font-semibold text-center">
+    <div class="w-6/12">Spellcasting Class</div>
+    <div class="w-2/12">Spellcasting Ability</div>
+    <div class="w-2/12">Spell Save DC</div>
+    <div class="w-2/12">Spell Attack Bonus</div>
+  </div>
+  <div class="flex text-center">
+    <textarea class="w-6/12" bind:value={c.sp_class} />
+    <div class="w-2/12">
+      <form>
+        <select bind:value={c.sp_ab}>
+          {#each ab_options as option}
+            <option value={option}>{option}</option>
+          {/each}
+        </select>
+      </form>
+    </div>
+    <textarea class="w-2/12" bind:value={c.sp_dc} />
+    <textarea class="w-2/12" bind:value={c.sp_atk} />
+  </div>
+  <div class="text-center font-bold">Spells</div>
+  <div class="flex font-semibold">
+    <div class="w-1/12">Prepared</div>
+    <div class="w-3/12">Name</div>
+    <div class="w-1/12">Save/ATK</div>
+    <div class="w-1/12">Time</div>
+    <div class="w-1/12">Range</div>
+    <div class="w-1/12">Components</div>
+    <div class="w-1/12">Duration</div>
+    <div class="w-1/12">Page Ref</div>
+    <div class="w-1/12">Notes</div>
+  </div>
+  {#each c.spells as spell}
+    <div class="flex">
+      <div class="w-1/12">{spell.prep}</div>
+      <div class="w-3/12">{spell.name}</div>
+      <div class="w-1/12">{spell.save}</div>
+      <div class="w-1/12">{spell.time}</div>
+      <div class="w-1/12">{spell.range}</div>
+      <div class="w-1/12">{spell.comp}</div>
+      <div class="w-1/12">{spell.duration}</div>
+      <div class="w-1/12">{spell.page_ref}</div>
+      <div class="w-1/12">{spell.notes}</div>
+    </div>
+  {/each}
+  <div class="text-center">
+    <button
+      class="w-full text-lg bg-blue-200 text-slate-900 p-2 hover:bg-teal-400"
+      on:click={() => create_window()}>Add Spell</button
+    >
+  </div>
 </main>

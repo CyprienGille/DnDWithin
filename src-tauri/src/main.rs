@@ -13,6 +13,19 @@ use std::{
 use tauri::api::dialog::blocking::FileDialogBuilder;
 
 #[derive(Deserialize, Serialize, Debug, Default)]
+struct Spell {
+    prep: bool,
+    name: String,
+    save: String,
+    time: String,
+    range: String,
+    comp: String,
+    duration: String,
+    page_ref: String,
+    notes: String,
+}
+
+#[derive(Deserialize, Serialize, Debug, Default)]
 struct Equipment {
     name: String,
     qty: i32,
@@ -144,6 +157,20 @@ struct Character {
     skin: String,
     eyes: String,
     hair: String,
+    appearance: String,
+    allies: String,
+    p_traits: String,
+    ideals: String,
+    bonds: String,
+    flaws: String,
+    backstory: String,
+    notes_1: String,
+    notes_2: String,
+    sp_class: String,
+    sp_ab: String,
+    sp_dc: String,
+    sp_atk: String,
+    spells: Vec<Spell>,
 }
 
 #[tauri::command]
@@ -184,12 +211,24 @@ fn save_character_to_file(c: Character) {
     );
 }
 
+#[tauri::command]
+async fn create_window(handle: tauri::AppHandle) {
+    let _local_window = tauri::WindowBuilder::new(
+        &handle,
+        "external", /* the unique window label */
+        tauri::WindowUrl::App("index.html".into()),
+    )
+    .build()
+    .unwrap();
+}
+
 fn main() {
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![
             open_file,
             get_default,
-            save_character_to_file
+            save_character_to_file,
+            create_window
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
