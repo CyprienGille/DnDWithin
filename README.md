@@ -1,4 +1,4 @@
-# DnD Within
+# DnD Within (WIP)
 
 *An editable digital character sheet for Dungeons & Dragons 5E.*
 
@@ -22,6 +22,8 @@ DnDWithin, commonly abridged as DDW, is a cross-platform, lightweight and entire
 
 
 ## How to use DDW?
+I recommand downloading the `exemple.json` file in this repository and loading it into DDW to see what is meant to go where!
+
 ### Downloading and Installing
 First release is yet to come!
 
