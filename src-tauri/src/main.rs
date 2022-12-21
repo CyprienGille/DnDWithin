@@ -14,12 +14,12 @@ use tauri::api::dialog::blocking::FileDialogBuilder;
 
 #[derive(Deserialize, Serialize, Debug, Default)]
 struct Spell {
-    prep: String,
+    prep: String, // Is prepared
     name: String,
     save: String,
     time: String,
     range: String,
-    comp: String,
+    comp: String, // Components
     duration: String,
     page_ref: String,
     notes: String,
@@ -28,22 +28,22 @@ struct Spell {
 #[derive(Deserialize, Serialize, Debug, Default)]
 struct Equipment {
     name: String,
-    qty: i32,
-    w: String,
+    qty: i32,  // Quantity
+    w: String, // Weight
 }
 
 #[derive(Deserialize, Serialize, Debug, Default)]
 struct Atk {
     name: String,
     dmg: String,
-    hit: String,
+    hit: String, //To hit bonus
     notes: String,
 }
 
 #[derive(Deserialize, Serialize, Debug, Default)]
 struct ProfOption {
-    mult: f32,
-    text: String,
+    mult: f32,    //multiplicator (1.0 for prof, 2.0 for expertise...)
+    text: String, // H for half, P for prof and E for expertise
 }
 
 #[derive(Deserialize, Serialize, Debug, Default)]
@@ -52,23 +52,23 @@ struct Character {
     class_level: String,
     player_name: String,
     race: String,
-    bg: String,
-    exp: i64,
+    bg: String, // Background
+    exp: i64,   // Experience
     str: i32,
     dex: i32,
     con: i32,
     int: i32,
     wis: i32,
     cha: i32,
-    prof_mod: i32,
-    prof_st_str: bool,
+    prof_mod: i32,     // Proficiency Bonus
+    prof_st_str: bool, // Proficiency in strength saving throws
     prof_st_dex: bool,
     prof_st_con: bool,
     prof_st_int: bool,
     prof_st_wis: bool,
     prof_st_cha: bool,
-    st_mods: String,
-    acro: ProfOption,
+    st_mods: String,  // Saving Throws modifiers
+    acro: ProfOption, // Abilities (ex: Acroobatics)
     anim: ProfOption,
     arca: ProfOption,
     athl: ProfOption,
@@ -86,19 +86,19 @@ struct Character {
     slei: ProfOption,
     stea: ProfOption,
     surv: ProfOption,
-    ac: i32,
-    res: String,
+    ac: i32,     // Armor Class
+    res: String, // Resistances and Immunities
     speeds: String,
     profs: String,
     max_hp: i32,
     hp: i32,
     temp_hp: i32,
-    hd_total: String,
-    hd: String,
-    ds_s_1: bool,
+    hd_total: String, // Total number of hit dice
+    hd: String,       // Current number of hit dice
+    ds_s_1: bool,     // Death saving throws - Success
     ds_s_2: bool,
     ds_s_3: bool,
-    ds_f_1: bool,
+    ds_f_1: bool, // Death saving throws - Failure
     ds_f_2: bool,
     ds_f_3: bool,
     actions: String,
@@ -112,11 +112,11 @@ struct Character {
     features_1: String,
     features_2: String,
     features_3: String,
-    cp: i32,
-    sp: i32,
-    ep: i32,
-    gp: i32,
-    pp: i32,
+    cp: i32, // copper
+    sp: i32, // silver
+    ep: i32, // electrum
+    gp: i32, // gold
+    pp: i32, // platinum
     eq_1: Equipment,
     eq_2: Equipment,
     eq_3: Equipment,
@@ -152,24 +152,24 @@ struct Character {
     size: String,
     height: String,
     weight: String,
-    alig: String,
+    alig: String, // Alignment
     faith: String,
     skin: String,
     eyes: String,
     hair: String,
     appearance: String,
     allies: String,
-    p_traits: String,
+    p_traits: String, // Personality traits
     ideals: String,
     bonds: String,
     flaws: String,
     backstory: String,
     notes_1: String,
     notes_2: String,
-    sp_class: String,
-    sp_ab: String,
-    sp_dc: String,
-    sp_atk: String,
+    sp_class: String, // Spellcasting class
+    sp_ab: String,    // Spellcasting Ability
+    sp_dc: String,    // Spell save DC
+    sp_atk: String,   // spell attack bonus
     spells: Vec<Spell>,
 }
 
