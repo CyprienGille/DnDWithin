@@ -1,0 +1,374 @@
+{
+  "name": "Keranumi",
+  "class_level": "Monk 3",
+  "player_name": "Player",
+  "race": "Variant Aasimar",
+  "bg": "Custom Background",
+  "exp": 0,
+  "str": 14,
+  "dex": 12,
+  "con": 12,
+  "int": 13,
+  "wis": 18,
+  "cha": 11,
+  "prof_mod": 2,
+  "prof_st_str": true,
+  "prof_st_dex": true,
+  "prof_st_con": false,
+  "prof_st_int": false,
+  "prof_st_wis": false,
+  "prof_st_cha": false,
+  "st_mods": "",
+  "acro": {
+    "mult": 0.0,
+    "text": ""
+  },
+  "anim": {
+    "mult": 0.0,
+    "text": ""
+  },
+  "arca": {
+    "mult": 0.0,
+    "text": ""
+  },
+  "athl": {
+    "mult": 0.0,
+    "text": ""
+  },
+  "dece": {
+    "mult": 0.0,
+    "text": ""
+  },
+  "hist": {
+    "mult": 1.0,
+    "text": "P"
+  },
+  "insi": {
+    "mult": 1.0,
+    "text": "P"
+  },
+  "inti": {
+    "mult": 0.0,
+    "text": ""
+  },
+  "inve": {
+    "mult": 0.0,
+    "text": ""
+  },
+  "medi": {
+    "mult": 0.0,
+    "text": ""
+  },
+  "natu": {
+    "mult": 0.0,
+    "text": ""
+  },
+  "perc": {
+    "mult": 0.0,
+    "text": ""
+  },
+  "perf": {
+    "mult": 0.0,
+    "text": ""
+  },
+  "pers": {
+    "mult": 1.0,
+    "text": "P"
+  },
+  "reli": {
+    "mult": 0.0,
+    "text": ""
+  },
+  "slei": {
+    "mult": 0.0,
+    "text": ""
+  },
+  "stea": {
+    "mult": 0.0,
+    "text": ""
+  },
+  "surv": {
+    "mult": 1.0,
+    "text": "P"
+  },
+  "ac": 15,
+  "res": "R : Necrotic, Radiant",
+  "speeds": "40ft (walk)",
+  "profs": "== Armor ==\nNone\n== Weapons ==\nShortsword, Simple Weapons\n== Tools ==\nLeatherworker's Tools, Navigator's Tools\n== Languages ==\nCelestial, Common, Elvish",
+  "max_hp": 21,
+  "hp": 21,
+  "temp_hp": 0,
+  "hd_total": "3",
+  "hd": "0",
+  "ds_s_1": false,
+  "ds_s_2": false,
+  "ds_s_3": false,
+  "ds_f_1": false,
+  "ds_f_2": false,
+  "ds_f_3": false,
+  "actions": "=== Actions ===\nAttack, Cast a spell, Dash, Disengage, Dodge, Grapple, Help, Hide, Improvise, Ready, Search, Shove, Use an Object\n\nHealing Hands (0/1 per LR)\n\n=== Bonus Actions ===\n*Arms of the Astral Self: Summon*\nAs a bonus action, you can spend 1 ki point to summon the arms of your astral self. When you do so, each creature of your choice that you can see within 10 ft. of you must succeed on a DEX saving throw (DC:14) or take 2d4 force damage.\n\nFor 10 minutes:\n- You can use WIS in place of STR when making STR checks/saving throws.\n- You can use the spectral arms to make unarmed strikes.\n\n*Flurry of Blows*\nAfter you take the Attack action on your turn, you can spend 1 ki point to make two unarmed strikes as a bonus action.\n\n*Patient Defense*\nYou can spend 1 ki point to take the Dodge action as a bonus action on your turn.\n\n*Step of the Wind*\nYou can spend 1 ki point to take the Disengage or Dash action as a bonus action on your turn, and your jump distance is doubled for the turn.\n\n*Unarmed Strike*\nWhen you use the Attack action with an unarmed strike or a monk weapon on your turn, you can make one unarmed strike as a bonus action.",
+  "senses": "",
+  "atk_1": {
+    "name": "Was",
+    "dmg": "1d6+2 Bludgeoning",
+    "hit": "+4",
+    "notes": "Simple, Versatile"
+  },
+  "atk_2": {
+    "name": "Unarmed Strike",
+    "dmg": "1d4+2 Bludgeoning",
+    "hit": "+4",
+    "notes": ""
+  },
+  "atk_3": {
+    "name": "Arms of the Astral Self (WIS)",
+    "dmg": "1d4+4 Force",
+    "hit": "+6",
+    "notes": ""
+  },
+  "atk_4": {
+    "name": "Arms of the Astral Self (DEX/STR)",
+    "dmg": "1d4+2 Force",
+    "hit": "+4",
+    "notes": ""
+  },
+  "atk_5": {
+    "name": "",
+    "dmg": "",
+    "hit": "",
+    "notes": ""
+  },
+  "atk_6": {
+    "name": "",
+    "dmg": "",
+    "hit": "",
+    "notes": ""
+  },
+  "features_1": "Unarmored Defense - PHB, pg. 78\nWhile not wearing armor and not using a shield, your AC equals 10 + DEX modifier + WIS modifier.\n\nMartial Arts - d4 - PHB, pg. 78\nWhile you are unarmed or wielding only monk weapons and you aren’t wearing armor or wielding a shield, you can use DEX instead of STR for the attack and damage rolls, you can roll your Martial Arts damage die in place of the normal damage, and when you use the Attack action on your turn, you can make one unarmed strike as a bonus action.",
+  "features_2": "Ki points : 3/3 per SR\nCan be used for :\n - Flurry of Blows\n - Patient Defense\n - Step of the Wind\n\nIf you spend 1 ki point or more as part of your action on your turn, you can make one attack with an unarmed strike or a monk weapon as a bonus action before the end of the turn.\n\nDeflect Missiles - PHB, pg. 78\nYou can use your reaction to deflect or catch the missile when you are hit by a ranged weapon attack. When you do so, the damage you take from the attack is reduced by 1d10 +4. If you reduce damage to 0 and have a free hand, you can spend 1 ki point to make a ranged attack (as with a monk weapon) with range 20/60.",
+  "features_3": "Arms of the Astral Self - 1d4 - TCE, pg. 50\n\nAs a bonus action, you can spend 1 ki point to summon the arms of your astral self. When you do so, each creature of your choice that you can see within 10 ft. of you must succeed on a DEX saving throw (DC:14) or take 2d4 force damage.\n\nFor 10 minutes:\n - You can use your WIS modifier in place of your STR modifier when making STR checks/saving throws.\n - You can use the spectral arms to make unarmed strikes.\n - When you make an unarmed strike with the arms on your turn, your reach for it is 5 ft. greater than normal.\n - The unarmed strikes you make with the arms can use your WIS modifier in place of your STR or DEX modifier for the attack and damage rolls, and their damage type is force.",
+  "cp": 0,
+  "sp": 0,
+  "ep": 0,
+  "gp": 14,
+  "pp": 0,
+  "eq_1": {
+    "name": "Was",
+    "qty": 1,
+    "w": ""
+  },
+  "eq_2": {
+    "name": "Dart",
+    "qty": 15,
+    "w": ""
+  },
+  "eq_3": {
+    "name": "Backpack",
+    "qty": 1,
+    "w": ""
+  },
+  "eq_4": {
+    "name": "Bedroll",
+    "qty": 1,
+    "w": ""
+  },
+  "eq_5": {
+    "name": "Mess Kit",
+    "qty": 1,
+    "w": ""
+  },
+  "eq_6": {
+    "name": "Rations (1 day)",
+    "qty": 10,
+    "w": ""
+  },
+  "eq_7": {
+    "name": "Hempen Rope (50 feet)",
+    "qty": 1,
+    "w": ""
+  },
+  "eq_8": {
+    "name": "Tinderbox",
+    "qty": 1,
+    "w": ""
+  },
+  "eq_9": {
+    "name": "Torch",
+    "qty": 10,
+    "w": ""
+  },
+  "eq_10": {
+    "name": "Waterskin",
+    "qty": 1,
+    "w": ""
+  },
+  "eq_11": {
+    "name": "",
+    "qty": 0,
+    "w": ""
+  },
+  "eq_12": {
+    "name": "",
+    "qty": 0,
+    "w": ""
+  },
+  "eq_13": {
+    "name": "",
+    "qty": 0,
+    "w": ""
+  },
+  "eq_14": {
+    "name": "",
+    "qty": 0,
+    "w": ""
+  },
+  "eq_15": {
+    "name": "",
+    "qty": 0,
+    "w": ""
+  },
+  "eq_16": {
+    "name": "",
+    "qty": 0,
+    "w": ""
+  },
+  "eq_17": {
+    "name": "",
+    "qty": 0,
+    "w": ""
+  },
+  "eq_18": {
+    "name": "",
+    "qty": 0,
+    "w": ""
+  },
+  "eq_19": {
+    "name": "",
+    "qty": 0,
+    "w": ""
+  },
+  "eq_20": {
+    "name": "",
+    "qty": 0,
+    "w": ""
+  },
+  "eq_21": {
+    "name": "",
+    "qty": 0,
+    "w": ""
+  },
+  "eq_22": {
+    "name": "",
+    "qty": 0,
+    "w": ""
+  },
+  "eq_23": {
+    "name": "",
+    "qty": 0,
+    "w": ""
+  },
+  "eq_24": {
+    "name": "",
+    "qty": 0,
+    "w": ""
+  },
+  "eq_25": {
+    "name": "",
+    "qty": 0,
+    "w": ""
+  },
+  "eq_26": {
+    "name": "",
+    "qty": 0,
+    "w": ""
+  },
+  "eq_27": {
+    "name": "",
+    "qty": 0,
+    "w": ""
+  },
+  "eq_28": {
+    "name": "",
+    "qty": 0,
+    "w": ""
+  },
+  "eq_29": {
+    "name": "",
+    "qty": 0,
+    "w": ""
+  },
+  "eq_30": {
+    "name": "",
+    "qty": 0,
+    "w": ""
+  },
+  "gender": "Non-binary",
+  "age": "884",
+  "size": "Medium",
+  "height": "161 cm",
+  "weight": "211 lb.",
+  "alig": "Lawful Neutral",
+  "faith": "Syncretism",
+  "skin": "Basaltic",
+  "eyes": "Green with an orange spark around the pupil",
+  "hair": "None",
+  "appearance": "",
+  "allies": "=== Organizations ===\n(Fallen) Empire of Jaya",
+  "p_traits": "",
+  "ideals": "",
+  "bonds": "",
+  "flaws": "",
+  "backstory": "More than a thousand years ago stood an Empire, ruling over lands that have now forgotten its existence. Governing this Empire was the Bloodline of Jaya, from the name of the first emperor. All of them, without an exception, proved to be accomplished leaders, wise strategists, careful but firm diplomats, battlefield heroes and kind protectors of their people. \n\nIndeed, this exceptionnal bloodline was blessed by the Gods, and every descendant of Jaya had with them a entity visible only to them that educated, guided and advised them with the wisdom of an experienced ruler at all times. This entity was called the Kà. Some magicians and scientists theorized that the current emperor's Kà was the spirit of their father remaining in the mortal realm to care about the Empire and their offspring, but no definitive proof of that was ever found before the death of the last Emperor.\n\nThe last emperor, Lehen Jaya, did not even see the fall of the Empire. Killed during one of the magic experiments he loved to conduct, he left behind no son or daughter that could take on his imperial role. In a matter of months, the neighboring countries rushed to the Capital, took advantage of the chaos that reigned there, and shared the Empire between themselves. The tale of the Jaya bloodline did not survive more than a few hundred years, and soon only one fact was still told around the chimneys on the dark winter nights: the story of how when Lehen died, its Kà found itself lost, grieving and without purpose, how it was materialized into an Aasimar by the same godly power that gave birth to his bloodline centuries ago, with the appearance of Léhen's father, Keranumi Jaya. It is said that Léhen's Kà still haunts this earth, looking for a purpose to his granted life.\n\nThat last part is false, though. If I did spend my first two centuries looking for answers in every book or ancient text I could find, I slowly grew more and more disillusioned, and lost all sense of purpose for my life. I merely survived for the past 300 years or so, living among humans as an aimless, joyless shell.",
+  "notes_1": "",
+  "notes_2": "",
+  "sp_class": "None",
+  "sp_ab": "Wisdom",
+  "sp_dc": "None",
+  "sp_atk": "None",
+  "spells": [
+    {
+      "prep": "",
+      "name": "==Cantrips==",
+      "save": "",
+      "time": "",
+      "range": "",
+      "comp": "",
+      "duration": "",
+      "page_ref": "",
+      "notes": ""
+    },
+    {
+      "prep": "Yes",
+      "name": "Light",
+      "save": "DEX 10",
+      "time": "1A",
+      "range": "Touch/20ft sphere",
+      "comp": "VM",
+      "duration": "1hr",
+      "page_ref": "PHB 255",
+      "notes": "At Will"
+    },
+    {
+      "prep": "",
+      "name": "==2nd Level==",
+      "save": "",
+      "time": "",
+      "range": "",
+      "comp": "",
+      "duration": "",
+      "page_ref": "",
+      "notes": ""
+    },
+    {
+      "prep": "Yes",
+      "name": "Lesser Restoration",
+      "save": "",
+      "time": "1A",
+      "range": "Touch",
+      "comp": "VS",
+      "duration": "Instant",
+      "page_ref": "PHB 255",
+      "notes": "1/LR"
+    }
+  ]
+}

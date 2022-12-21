@@ -22,7 +22,7 @@ DnDWithin, commonly abridged as DDW, is a cross-platform, lightweight and entire
 
 
 ## How to use DDW?
-I recommand downloading the `exemple.json` file in this repository and loading it into DDW to see what is meant to go where!
+I recommand downloading the `example_character.json` file in this repository and loading it into DDW to see what is meant to go where!
 
 ### Downloading and Installing
 Navigate to the ***Releases*** tab on the right of this page, and grab yourself the latest installer (an `.msi` file). Simply download it and execute it, saying yes to every prompt that might appear. You will then be able to find DnDWithin where you usually find your applications. 
