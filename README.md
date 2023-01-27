@@ -2,6 +2,9 @@
 
 *An editable digital character sheet for Dungeons & Dragons 5E.*
 
+![An illustration of the user interface of DnDWithin](example_1.png)
+
+
 ## What is this?
 
 DnDWithin, commonly abridged as DDW, is a cross-platform, lightweight and entirely local desktop application to view, edit and save a 5th edition Dungeon&Dragons character sheet. It is meant as a replacement for your paper character sheet, and as an alternative to online tools such as D&DBeyond.
