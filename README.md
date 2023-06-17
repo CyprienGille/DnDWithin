@@ -25,7 +25,7 @@ DnDWithin, commonly abridged as DDW, is a cross-platform, lightweight and entire
 
 
 ## How to use DDW?
-I recommand downloading the `example_character.json` file in this repository and loading it into DDW to see what is meant to go where!
+I recommend downloading the `example_character.json` file in this repository and loading it into DDW to see what is meant to go where!
 
 ### Downloading and Installing
 Navigate to the ***Releases*** tab on the right of this page, and grab yourself the latest installer (an `.msi` file). Simply download it and execute it, saying yes to every prompt that might appear. You will then be able to find DnDWithin where you usually find your applications. 
@@ -44,7 +44,7 @@ Feel free to file an issue on github! This is just a hobby project so I can't gu
 
 ### Usage Notes
  - Experience points have to be an integer number! If you're using milestone advancement, just leave it at whatever number tickles your fancy.
- - Added spells must be modified by modifiying the `.json` file in your favorite text editor, they're at the end of it. For now, this is the only way to delete/edit spells.
+ - Added spells must be modified by modifiying the `.json` file in your favorite text editor, they're at the end of it. For now, this is the only way to delete/edit/reorder spells.
 
 ## How does this work?
 For the curious among you, as you can see by looking at the code, this is a [tauri](https://tauri.app/) application, using [rust](https://www.rust-lang.org/) for its backend and [svelte](https://svelte.dev/) for its frontend.
