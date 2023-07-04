@@ -68,7 +68,7 @@ struct Character {
     prof_st_wis: bool,
     prof_st_cha: bool,
     st_mods: String,  // Saving Throws modifiers
-    acro: ProfOption, // Abilities (ex: Acroobatics)
+    acro: ProfOption, // Abilities (ex: Acrobatics)
     anim: ProfOption,
     arca: ProfOption,
     athl: ProfOption,
