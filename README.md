@@ -1,5 +1,7 @@
 # DnD Within
 
+**Due to other projects, this repository is in maintenance mode and will not be updated with new features for now. New issues will still be worked on, albeit probably slowly.**
+
 *An editable digital character sheet for Dungeons & Dragons 5E.*
 
 ![An illustration of the user interface of DnDWithin](example_1.png)
