@@ -183,11 +183,10 @@ fn get_default() -> Character {
 
 #[tauri::command]
 async fn open_file() -> Character {
-    let c = match FileDialogBuilder::new().pick_file() {
+    match FileDialogBuilder::new().pick_file() {
         Some(fp) => read_character_from_file(fp).unwrap_or_default(),
         None => Character::default(),
-    };
-    c
+    }
 }
 
 fn read_character_from_file<P: AsRef<Path>>(path: P) -> Result<Character, Box<dyn Error>> {
