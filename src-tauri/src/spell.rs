@@ -5,7 +5,7 @@ use crate::{
 
 pub struct Spell {
     name: String,
-    reference: Reference,
+    reference: Option<Reference>,
     level: u32,
     school: School,
     casting_time: Time,
@@ -26,7 +26,7 @@ impl Spell {
     #[allow(clippy::too_many_arguments)]
     pub fn new(
         name: String,
-        reference: Reference,
+        reference: Option<Reference>,
         level: u32,
         school: School,
         casting_time: Time,
@@ -90,7 +90,9 @@ pub struct Size {
     distance: Option<Distance>,
 }
 
+#[derive(Debug, Default)]
 enum SizeType {
+    #[default]
     Point,
     Sphere,
     Cone,
