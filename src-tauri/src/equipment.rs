@@ -2,7 +2,7 @@ use crate::commons::{Currency, Damage, Distance, Reference};
 
 pub struct Item {
     name: String,
-    reference: Reference,
+    reference: Option<Reference>,
     rarity: Rarity,
     wondrous: bool,
     weight: Option<Weight>,
@@ -13,7 +13,9 @@ pub struct Item {
     armor: Option<Armor>,
 }
 
+#[derive(Debug, Default)]
 pub enum Rarity {
+    #[default]
     Common,
     Uncommon,
     Rare,
@@ -28,7 +30,9 @@ pub struct Weight {
     unit: WeightUnit,
 }
 
+#[derive(Default)]
 pub enum WeightUnit {
+    #[default]
     Pounds,
     Grams,
     Kilograms,
