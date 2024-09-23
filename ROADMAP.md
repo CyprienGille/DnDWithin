@@ -4,6 +4,7 @@
 
 - [ ] Tabs
 - [ ] Add character token image
+- [ ] Add lock to character sheet
 
 ## Spells
 
