@@ -43,7 +43,9 @@ impl Distance {
     }
 }
 
+#[derive(Default)]
 pub enum DistanceUnit {
+    #[default]
     Feet,
     Miles,
     Meters,
