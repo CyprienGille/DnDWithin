@@ -9,7 +9,7 @@ pub struct Time {
     unit: TimeUnit,
 }
 
-enum TimeUnit {
+pub enum TimeUnit {
     Instant,
     BonusAction,
     Action,
@@ -23,7 +23,27 @@ pub struct Distance {
     unit: DistanceUnit,
 }
 
-enum DistanceUnit {
+impl Distance {
+    pub fn new(number: u32, unit: DistanceUnit) -> Self {
+        Self { number, unit }
+    }
+
+    pub fn feet(number: u32) -> Self {
+        Self {
+            number,
+            unit: DistanceUnit::Feet,
+        }
+    }
+
+    pub fn miles(number: u32) -> Self {
+        Self {
+            number,
+            unit: DistanceUnit::Miles,
+        }
+    }
+}
+
+pub enum DistanceUnit {
     Feet,
     Miles,
     Meters,
