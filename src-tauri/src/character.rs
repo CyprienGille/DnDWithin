@@ -14,9 +14,11 @@ pub struct Character {
     species: String,
     abilities: Vec<Ability>,
     skills: Vec<Skill>,
+    passives: Vec<Skill>,
     background: Background,
     senses: Vec<Sense>,
     languages: Vec<String>,
+    exhaustion: Exhaustion,
     equipment: Vec<Item>,
     spell_list: Vec<Spell>,
 }
@@ -31,4 +33,31 @@ pub enum SenseType {
     Darkvision,
     Tremorsense,
     Truesight,
+}
+
+pub enum Condition {
+    Blinded,
+    Charmed,
+    Deafened,
+    Frightened,
+    Grappled,
+    Incapacitated,
+    Invisible,
+    Paralyzed,
+    Petrified,
+    Poisoned,
+    Prone,
+    Restrained,
+    Stunned,
+    Unconscious,
+}
+
+pub enum Exhaustion {
+    None,
+    One,
+    Two,
+    Three,
+    Four,
+    Five,
+    Six,
 }
