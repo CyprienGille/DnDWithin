@@ -69,7 +69,25 @@ pub struct Currency {
 pub struct Charges {
     current: u32,
     max: u32,
-    recharge: Recharge,
+    recharge: Option<Recharge>,
+}
+
+impl Charges {
+    pub fn empty(max: u32, recharge: Option<Recharge>) -> Self {
+        Self {
+            current: 0,
+            max,
+            recharge,
+        }
+    }
+
+    pub fn full(max: u32, recharge: Option<Recharge>) -> Self {
+        Self {
+            current: max,
+            max,
+            recharge,
+        }
+    }
 }
 
 pub struct Recharge {
