@@ -93,6 +93,13 @@ impl Skill {
             Self::init("Survival".to_string()),
         ]
     }
+    pub fn passives() -> Vec<Self> {
+        vec![
+            Self::init("Insight".to_string()),
+            Self::init("Investigation".to_string()),
+            Self::init("Perception".to_string()),
+        ]
+    }
 }
 
 #[derive(Debug, Default)]
