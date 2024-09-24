@@ -2,9 +2,9 @@ use std::collections::HashSet;
 
 use crate::{
     ability::{Ability, Skill},
-    commons::{Currency, Distance},
-    description::Background,
-    equipment::Item,
+    commons::{Charges, Currency, Distance},
+    description::{Background, Description},
+    equipment::{Attunement, Item},
     spell::Spell,
 };
 
@@ -22,7 +22,9 @@ pub struct Character {
     background: Background,
     senses: HashSet<Sense>,
     languages: Vec<String>,
+    description: Description,
     equipment: Vec<Item>,
+    attunement_slots: Charges,
     currency: Currency,
     spell_list: Vec<Spell>,
 }
