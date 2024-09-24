@@ -3,10 +3,16 @@ use crate::{
     commons::{Damage, Distance, Reference, Time},
 };
 
+pub struct Spellcasting {
+    modifier: i8,
+    spell_attack: i8,
+    save_dc: i8,
+}
+
 pub struct Spell {
     name: String,
     reference: Option<Reference>,
-    level: u32,
+    level: u8,
     school: School,
     casting_time: Time,
     range: Range,
@@ -18,7 +24,7 @@ pub struct Spell {
     known: bool,
     description: String,
     consumes_slot: bool,
-    upcast: u32,
+    upcast: u8,
     saving_throw: Option<Ability>,
     base_damage: Option<Vec<Damage>>,
     damage_increase: Option<Damage>,
@@ -29,7 +35,7 @@ impl Spell {
     pub fn new(
         name: String,
         reference: Option<Reference>,
-        level: u32,
+        level: u8,
         school: School,
         casting_time: Time,
         range: Range,
@@ -41,7 +47,7 @@ impl Spell {
         known: bool,
         description: String,
         consumes_slot: bool,
-        upcast: u32,
+        upcast: u8,
         saving_throw: Option<Ability>,
         base_damage: Option<Vec<Damage>>,
         damage_increase: Option<Damage>,
