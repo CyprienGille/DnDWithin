@@ -54,9 +54,7 @@ pub enum DistanceUnit {
 
 pub struct Damage {
     dmg_type: DamageType,
-    dice_number: u32,
-    dice_type: Dice,
-    bonus: i32,
+    roll: Roll,
 }
 
 pub enum DamageType {
@@ -75,6 +73,12 @@ pub enum DamageType {
     Thunder,
 }
 
+pub struct Roll {
+    dice: Dice,
+    dice_amount: u32,
+    bonus: i32,
+}
+
 pub enum Dice {
     D4,
     D6,
@@ -91,4 +95,17 @@ pub struct Currency {
     electrum: Option<i32>,
     gold: Option<i32>,
     platinum: Option<i32>,
+}
+
+pub struct Charges {
+    current: u32,
+    max: u32,
+    recharge: Recharge,
+}
+
+pub struct Recharge {
+    short_rest: bool,
+    long_rest: bool,
+    desc: String,
+    regained_charges: Option<Roll>,
 }
