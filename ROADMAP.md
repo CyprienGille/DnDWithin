@@ -40,6 +40,8 @@
 
 ## Abilities
 
+- [ ] Option to auto-fill skill bonuses
+
 ## Backend
 
 - [ ] Full rework to remove repetition and make DDW more expandable
