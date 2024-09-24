@@ -1,3 +1,5 @@
+use crate::commons::{Reroll, Roll};
+
 pub struct Ability {
     name: String,
     short_name: String,
@@ -42,33 +44,30 @@ impl Ability {
     }
 }
 
-#[derive(Debug, Default)]
+#[derive(Default)]
 pub struct SavingThrowInfo {
     proficiency: Proficiency,
-    bonus: i32,
+    roll: Roll,
+    fluff: String,
 }
 
 pub struct Skill {
     name: String,
     proficiency: Proficiency,
-    bonus: i32,
+    roll: Roll,
 }
 
 impl Skill {
-    pub fn new(name: String, proficiency: Proficiency, bonus: i32) -> Self {
+    pub fn new(name: String, proficiency: Proficiency, roll: Roll) -> Self {
         Self {
             name,
             proficiency,
-            bonus,
+            roll,
         }
     }
 
     pub fn init(name: String) -> Self {
-        Self {
-            name,
-            proficiency: Proficiency::default(),
-            bonus: 0,
-        }
+        Self::new(name, Proficiency::default(), Roll::flat_d20(0))
     }
 
     pub fn classic() -> Vec<Self> {
