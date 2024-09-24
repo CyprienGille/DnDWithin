@@ -45,18 +45,46 @@ pub enum DamageType {
 
 pub struct Roll {
     dice: Dice,
-    dice_amount: u32,
     bonus: i32,
+    reroll: Reroll,
+}
+
+impl Roll {
+    pub fn d20(bonus: i32, reroll: Reroll) -> Self {
+        Self {
+            dice: Dice::D20(1),
+            bonus,
+            reroll,
+        }
+    }
+
+    pub fn flat_d20(bonus: i32) -> Self {
+        Self {
+            dice: Dice::D20(1),
+            bonus,
+            reroll: Reroll::Flat,
+        }
+    }
+}
+
+impl Default for Roll {
+    fn default() -> Self {
+        Self {
+            dice: Dice::D20(1),
+            bonus: 0,
+            reroll: Reroll::Flat,
+        }
+    }
 }
 
 pub enum Dice {
-    D4,
-    D6,
-    D8,
-    D10,
-    D12,
-    D20,
-    D100,
+    D4(u32),
+    D6(u32),
+    D8(u32),
+    D10(u32),
+    D12(u32),
+    D20(u32),
+    D100(u32),
 }
 
 pub struct Currency {
@@ -95,4 +123,10 @@ pub struct Recharge {
     long_rest: bool,
     desc: String,
     regained_charges: Option<Roll>,
+}
+
+pub enum Reroll {
+    Advantage,
+    Disadvantage,
+    Flat,
 }
