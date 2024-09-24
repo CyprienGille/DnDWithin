@@ -26,17 +26,10 @@ pub enum Rarity {
     None,
 }
 
-pub struct Weight {
-    number: u32,
-    unit: WeightUnit,
-}
-
-#[derive(Default)]
-pub enum WeightUnit {
-    #[default]
-    Pounds,
-    Grams,
-    Kilograms,
+pub enum Weight {
+    Pounds(u32),
+    Grams(u32),
+    Kilograms(u32),
 }
 
 pub struct Attunement {

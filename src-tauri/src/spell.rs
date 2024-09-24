@@ -17,9 +17,11 @@ pub struct Spell {
     prepared: bool,
     known: bool,
     description: String,
+    consumes_slot: bool,
+    upcast: u32,
     saving_throw: Option<Ability>,
     base_damage: Option<Vec<Damage>>,
-    damage_increase: Option<DamageIncrease>,
+    damage_increase: Option<Damage>,
 }
 
 impl Spell {
@@ -38,9 +40,11 @@ impl Spell {
         prepared: bool,
         known: bool,
         description: String,
+        consumes_slot: bool,
+        upcast: u32,
         saving_throw: Option<Ability>,
         base_damage: Option<Vec<Damage>>,
-        damage_increase: Option<DamageIncrease>,
+        damage_increase: Option<Damage>,
     ) -> Self {
         Self {
             name,
@@ -56,6 +60,8 @@ impl Spell {
             prepared,
             known,
             description,
+            consumes_slot,
+            upcast,
             saving_throw,
             base_damage,
             damage_increase,
@@ -104,10 +110,4 @@ pub struct Components {
     verbal: bool,
     somatic: bool,
     material: Option<String>,
-}
-
-pub struct DamageIncrease {
-    active: bool,
-    times: u32,
-    to_add: Damage,
 }

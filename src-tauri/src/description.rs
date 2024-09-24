@@ -2,10 +2,10 @@ use crate::commons::Reference;
 
 pub struct Description {
     alignment: Option<Alignment>,
-    gender: Option<String>,
-    eyes: Option<String>,
+    gender: String,
+    eyes: String,
     size: Size,
-    hair: Option<String>,
+    hair: String,
 }
 
 #[derive(Default, Debug)]

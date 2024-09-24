@@ -4,52 +4,22 @@ pub struct Reference {
     page: u32,
 }
 
-pub struct Time {
-    number: u32,
-    unit: TimeUnit,
-}
-
-pub enum TimeUnit {
+pub enum Time {
     Instant,
     BonusAction,
     Action,
     Reaction,
-    Minute,
-    Hour,
+    Minute(u32),
+    Hour(u32),
 }
 
-pub struct Distance {
-    number: u32,
-    unit: DistanceUnit,
-}
-
-impl Distance {
-    pub fn new(number: u32, unit: DistanceUnit) -> Self {
-        Self { number, unit }
-    }
-
-    pub fn feet(number: u32) -> Self {
-        Self {
-            number,
-            unit: DistanceUnit::Feet,
-        }
-    }
-
-    pub fn miles(number: u32) -> Self {
-        Self {
-            number,
-            unit: DistanceUnit::Miles,
-        }
-    }
-}
-
-#[derive(Default)]
-pub enum DistanceUnit {
-    #[default]
-    Feet,
-    Miles,
-    Meters,
-    Kilometers,
+pub enum Distance {
+    Inches(u32),
+    Feet(u32),
+    Miles(u32),
+    Centimeters(u32),
+    Meters(u32),
+    Kilometers(u32),
 }
 
 pub struct Damage {
@@ -92,7 +62,6 @@ pub enum Dice {
 pub struct Currency {
     copper: Option<i32>,
     silver: Option<i32>,
-    electrum: Option<i32>,
     gold: Option<i32>,
     platinum: Option<i32>,
 }
