@@ -5,6 +5,7 @@
 - [ ] Tabs
 - [ ] Add character token image
 - [ ] Add lock to character sheet
+- [ ] In-App dice rolling
 
 ## Spells
 
@@ -53,7 +54,6 @@
 
 # FUTURE
 
-- [ ] In-App dice rolling
 - [ ] MacOS version
 - [ ] Linux version
 - [ ] Mobile version
