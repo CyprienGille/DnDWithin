@@ -1,4 +1,4 @@
-use crate::commons::{Currency, Damage, Distance, Reference};
+use crate::commons::{Charges, Currency, Damage, Distance, Reference};
 
 pub struct Item {
     name: String,
@@ -11,6 +11,7 @@ pub struct Item {
     value: Currency,
     weapon: Option<Weapon>,
     armor: Option<Armor>,
+    charges: Option<Charges>,
 }
 
 #[derive(Debug, Default)]
