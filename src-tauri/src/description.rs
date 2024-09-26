@@ -1,5 +1,6 @@
-use crate::{commons::Reference, equipment::Weight};
+use crate::{commons::Reference, commons::Weight};
 
+#[derive(Debug)]
 pub struct Description {
     alignment: Option<Alignment>,
     gender: String,
@@ -37,7 +38,7 @@ pub enum Alignment {
     ChaoticEvil,
 }
 
-#[derive(Default)]
+#[derive(Debug, Default)]
 pub enum Size {
     Tiny,
     Small,
@@ -47,7 +48,7 @@ pub enum Size {
     Huge,
     Gargantuan,
 }
-
+#[derive(Debug)]
 pub struct Background {
     name: String,
     reference: Option<Reference>,

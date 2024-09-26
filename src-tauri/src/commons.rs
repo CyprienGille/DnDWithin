@@ -1,9 +1,10 @@
+#[derive(Debug)]
 pub struct Reference {
     source_name: String,
     long_source_name: Option<String>,
     page: u32,
 }
-
+#[derive(Debug)]
 pub enum Time {
     Instant,
     BonusAction,
@@ -12,7 +13,7 @@ pub enum Time {
     Minute(u32),
     Hour(u32),
 }
-
+#[derive(Debug)]
 pub enum Distance {
     Inches(u32),
     Feet(u32),
@@ -21,12 +22,12 @@ pub enum Distance {
     Meters(u32),
     Kilometers(u32),
 }
-
+#[derive(Debug)]
 pub struct Damage {
     dmg_type: DamageType,
     roll: Roll,
 }
-
+#[derive(Debug)]
 pub enum DamageType {
     Acid,
     Bludgeoning,
@@ -43,6 +44,7 @@ pub enum DamageType {
     Thunder,
 }
 
+#[derive(Debug)]
 pub struct Roll {
     dice: Dice,
     bonus: i32,
@@ -77,6 +79,7 @@ impl Default for Roll {
     }
 }
 
+#[derive(Debug)]
 pub enum Dice {
     D4(u32),
     D6(u32),
@@ -87,6 +90,14 @@ pub enum Dice {
     D100(u32),
 }
 
+#[derive(Debug)]
+pub enum Reroll {
+    Advantage,
+    Disadvantage,
+    Flat,
+}
+
+#[derive(Debug)]
 pub struct Currency {
     copper: Option<i32>,
     silver: Option<i32>,
@@ -94,6 +105,7 @@ pub struct Currency {
     platinum: Option<i32>,
 }
 
+#[derive(Debug)]
 pub struct Charges {
     current: u32,
     max: u32,
@@ -118,6 +130,7 @@ impl Charges {
     }
 }
 
+#[derive(Debug)]
 pub struct Recharge {
     short_rest: bool,
     long_rest: bool,
@@ -125,8 +138,9 @@ pub struct Recharge {
     regained_charges: Option<Roll>,
 }
 
-pub enum Reroll {
-    Advantage,
-    Disadvantage,
-    Flat,
+#[derive(Debug)]
+pub enum Weight {
+    Pounds(u32),
+    Grams(u32),
+    Kilograms(u32),
 }

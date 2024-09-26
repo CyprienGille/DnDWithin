@@ -1,5 +1,6 @@
-use crate::commons::{Reroll, Roll};
+use crate::commons::Roll;
 
+#[derive(Debug)]
 pub struct Ability {
     name: String,
     short_name: String,
@@ -44,13 +45,14 @@ impl Ability {
     }
 }
 
-#[derive(Default)]
+#[derive(Debug, Default)]
 pub struct SavingThrowInfo {
     proficiency: Proficiency,
     roll: Roll,
     fluff: String,
 }
 
+#[derive(Debug)]
 pub struct Skill {
     name: String,
     proficiency: Proficiency,

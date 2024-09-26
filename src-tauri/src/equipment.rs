@@ -1,5 +1,5 @@
-use crate::commons::{Charges, Currency, Damage, Distance, Reference};
-
+use crate::commons::{Charges, Currency, Damage, Distance, Reference, Weight};
+#[derive(Debug)]
 pub struct Item {
     name: String,
     reference: Option<Reference>,
@@ -26,29 +26,24 @@ pub enum Rarity {
     None,
 }
 
-pub enum Weight {
-    Pounds(u32),
-    Grams(u32),
-    Kilograms(u32),
-}
-
+#[derive(Debug)]
 pub struct Attunement {
     required: bool,
     by: Option<String>,
 }
-
+#[derive(Debug)]
 pub struct Weapon {
     damage: Vec<Damage>,
     category: WeaponCategory,
     properties: Vec<WeaponProperty>,
     range: Option<Range>,
 }
-
+#[derive(Debug)]
 pub enum WeaponCategory {
     Martial,
     Simple,
 }
-
+#[derive(Debug)]
 pub enum WeaponProperty {
     Ammunition,
     Finesse,
@@ -62,12 +57,12 @@ pub enum WeaponProperty {
     TwoHanded(Damage),
     Versatile,
 }
-
+#[derive(Debug)]
 pub struct Range {
     base: Distance,
     long: Option<Distance>,
 }
-
+#[derive(Debug)]
 pub struct Armor {
     armor_type: ArmorType,
     ac: u32,
@@ -75,7 +70,7 @@ pub struct Armor {
     strength_requirement: Option<u32>,
     stealth_disadvantage: bool,
 }
-
+#[derive(Debug)]
 pub enum ArmorType {
     Light,
     Medium,

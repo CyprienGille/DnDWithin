@@ -1,5 +1,6 @@
 use crate::commons::{Charges, Reference};
 
+#[derive(Debug)]
 pub struct Feature {
     name: String,
     reference: Option<Reference>,
@@ -9,6 +10,7 @@ pub struct Feature {
     charges: Option<Charges>,
 }
 
+#[derive(Debug)]
 pub enum FeatureOrigin {
     Species,
     Class,

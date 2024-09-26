@@ -4,11 +4,12 @@ use crate::{
     ability::{Ability, Skill},
     commons::{Charges, Currency, DamageType, Dice, Distance},
     description::{Background, Description},
-    equipment::{Attunement, Item},
+    equipment::Item,
     feature::Feature,
     spell::{Spell, Spellcasting},
 };
 
+#[derive(Debug)]
 pub struct Character {
     name: String,
     class: String,
@@ -41,6 +42,7 @@ pub struct Character {
     spell_list: Vec<Spell>,
 }
 
+#[derive(Debug)]
 pub enum Sense {
     Blindsight(Distance),
     Darkvision(Distance),
@@ -48,6 +50,7 @@ pub enum Sense {
     Truesight(Distance),
 }
 
+#[derive(Debug)]
 pub enum Condition {
     Blinded,
     Charmed,
@@ -65,6 +68,7 @@ pub enum Condition {
     Unconscious,
 }
 
+#[derive(Debug)]
 pub struct Health {
     current_hp: u32,
     max_hp: u32,
@@ -72,18 +76,19 @@ pub struct Health {
     hit_dice: Dice,
 }
 
+#[derive(Debug)]
 pub struct Defenses {
     dmg_interaction: Vec<DamageInteraction>,
     cond_immunities: Vec<Condition>,
     fluff: String,
 }
-
+#[derive(Debug)]
 pub enum DamageInteraction {
     Resistant(DamageType),
     Immune(DamageType),
     Vulnerable(DamageType),
 }
-
+#[derive(Debug)]
 pub enum Speed {
     Burrowing(Distance),
     Climbing(Distance),
