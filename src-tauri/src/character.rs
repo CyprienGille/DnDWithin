@@ -10,7 +10,7 @@ use crate::{
 };
 
 pub struct CharacterState {
-    state: Mutex<Character>,
+    pub state: Mutex<Character>,
 }
 
 impl CharacterState {
@@ -21,7 +21,7 @@ impl CharacterState {
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Character {
     name: String,
     class: String,
@@ -97,7 +97,7 @@ impl Character {
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone, Copy)]
 pub enum Sense {
     Blindsight(Distance),
     Darkvision(Distance),
@@ -105,7 +105,7 @@ pub enum Sense {
     Truesight(Distance),
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone, Copy)]
 pub enum Condition {
     Blinded,
     Charmed,
@@ -123,7 +123,7 @@ pub enum Condition {
     Unconscious,
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Health {
     current_hp: u32,
     max_hp: u32,
@@ -143,7 +143,7 @@ pub enum DamageInteraction {
     Immune(DamageType),
     Vulnerable(DamageType),
 }
-#[derive(Debug)]
+#[derive(Debug, Clone, Copy)]
 pub enum Speed {
     Burrowing(Distance),
     Climbing(Distance),

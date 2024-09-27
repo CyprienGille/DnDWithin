@@ -1,6 +1,6 @@
 use crate::{commons::Reference, commons::Weight};
 
-#[derive(Debug, Default)]
+#[derive(Debug, Default, Clone)]
 pub struct Description {
     alignment: Option<Alignment>,
     gender: String,
@@ -23,7 +23,7 @@ pub struct Description {
     other_notes: String,
 }
 
-#[derive(Default, Debug)]
+#[derive(Default, Debug, Clone)]
 pub enum Alignment {
     Unaligned,
     LawfulGood,
@@ -38,7 +38,7 @@ pub enum Alignment {
     ChaoticEvil,
 }
 
-#[derive(Debug, Default)]
+#[derive(Debug, Default, Clone)]
 pub enum Size {
     Tiny,
     Small,
@@ -48,7 +48,7 @@ pub enum Size {
     Huge,
     Gargantuan,
 }
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Background {
     name: String,
     reference: Option<Reference>,

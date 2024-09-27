@@ -1,5 +1,6 @@
 use crate::commons::{Charges, Damage, Distance, Reference, Weight};
-#[derive(Debug)]
+
+#[derive(Debug, Clone)]
 pub struct Item {
     name: String,
     reference: Option<Reference>,
@@ -15,7 +16,7 @@ pub struct Item {
     equipped: bool,
 }
 
-#[derive(Debug, Default)]
+#[derive(Debug, Default, Clone)]
 pub enum Rarity {
     #[default]
     Common,
@@ -27,24 +28,27 @@ pub enum Rarity {
     None,
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Attunement {
     required: bool,
     by: Option<String>,
 }
-#[derive(Debug)]
+
+#[derive(Debug, Clone)]
 pub struct Weapon {
     damage: Vec<Damage>,
     category: WeaponCategory,
     properties: Vec<WeaponProperty>,
     range: Option<Range>,
 }
-#[derive(Debug)]
+
+#[derive(Debug, Clone)]
 pub enum WeaponCategory {
     Martial,
     Simple,
 }
-#[derive(Debug)]
+
+#[derive(Debug, Clone)]
 pub enum WeaponProperty {
     Ammunition,
     Finesse,
@@ -58,12 +62,14 @@ pub enum WeaponProperty {
     TwoHanded(Damage),
     Versatile,
 }
-#[derive(Debug)]
+
+#[derive(Debug, Clone)]
 pub struct Range {
     base: Distance,
     long: Option<Distance>,
 }
-#[derive(Debug)]
+
+#[derive(Debug, Clone)]
 pub struct Armor {
     armor_type: ArmorType,
     ac: u32,
@@ -71,14 +77,15 @@ pub struct Armor {
     strength_requirement: Option<u32>,
     stealth_disadvantage: bool,
 }
-#[derive(Debug)]
+
+#[derive(Debug, Clone)]
 pub enum ArmorType {
     Light,
     Medium,
     Heavy,
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Currency {
     copper: Option<i32>,
     silver: Option<i32>,

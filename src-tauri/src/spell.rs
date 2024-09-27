@@ -2,13 +2,15 @@ use crate::{
     ability::Ability,
     commons::{Damage, Distance, Reference, Time},
 };
-#[derive(Debug, Default)]
+
+#[derive(Debug, Default, Clone)]
 pub struct Spellcasting {
     modifier: i8,
     spell_attack: i8,
     save_dc: i8,
 }
-#[derive(Debug)]
+
+#[derive(Debug, Clone)]
 pub struct Spell {
     name: String,
     reference: Option<Reference>,
@@ -104,7 +106,8 @@ impl Spell {
         }
     }
 }
-#[derive(Debug)]
+
+#[derive(Debug, Clone)]
 pub enum School {
     Abjuration,
     Conjuration,
@@ -115,24 +118,27 @@ pub enum School {
     Necromancy,
     Transmutation,
 }
-#[derive(Debug)]
+
+#[derive(Debug, Clone)]
 pub struct Range {
     range_type: RangeType,
     distance: Option<Distance>,
 }
-#[derive(Debug)]
+
+#[derive(Debug, Clone)]
 enum RangeType {
     Touch,
     Self_,
     Point,
 }
-#[derive(Debug)]
+
+#[derive(Debug, Clone)]
 pub struct Size {
     size_type: SizeType,
     distance: Option<Distance>,
 }
 
-#[derive(Debug, Default)]
+#[derive(Debug, Default, Clone)]
 enum SizeType {
     #[default]
     Point,
@@ -141,7 +147,8 @@ enum SizeType {
     Line,
     Square,
 }
-#[derive(Debug)]
+
+#[derive(Debug, Clone)]
 pub struct Components {
     verbal: bool,
     somatic: bool,

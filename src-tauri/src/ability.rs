@@ -1,6 +1,6 @@
 use crate::commons::Roll;
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Ability {
     name: String,
     short_name: String,
@@ -45,14 +45,14 @@ impl Ability {
     }
 }
 
-#[derive(Debug, Default)]
+#[derive(Debug, Default, Clone)]
 pub struct SavingThrowInfo {
     proficiency: Proficiency,
     roll: Roll,
     fluff: String,
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Skill {
     name: String,
     proficiency: Proficiency,
@@ -103,7 +103,7 @@ impl Skill {
     }
 }
 
-#[derive(Debug, Default)]
+#[derive(Debug, Default, Clone)]
 pub enum Proficiency {
     #[default]
     Not,
