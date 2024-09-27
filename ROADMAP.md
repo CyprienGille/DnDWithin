@@ -3,7 +3,6 @@
 ## General
 
 - [ ] Tabs
-- [ ] Add character token image
 - [ ] Add lock to character sheet
 - [ ] In-App dice rolling
 
@@ -56,6 +55,7 @@
 # FUTURE
 
 - [ ] Ability to switch between light and dark mode
+- [ ] Ability to add token picture to sheet
 - [ ] MacOS version
 - [ ] Linux version
 - [ ] Mobile version
