@@ -2,7 +2,7 @@ use crate::{
     ability::Ability,
     commons::{Damage, Distance, Reference, Time},
 };
-#[derive(Debug)]
+#[derive(Debug, Default)]
 pub struct Spellcasting {
     modifier: i8,
     spell_attack: i8,
