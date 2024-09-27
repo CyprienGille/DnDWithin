@@ -1,6 +1,6 @@
 use crate::{commons::Reference, commons::Weight};
 
-#[derive(Debug)]
+#[derive(Debug, Default)]
 pub struct Description {
     alignment: Option<Alignment>,
     gender: String,
@@ -53,4 +53,14 @@ pub struct Background {
     name: String,
     reference: Option<Reference>,
     description: String,
+}
+
+impl Background {
+    pub fn get_empty() -> Self {
+        Self {
+            name: "".to_string(),
+            reference: None,
+            description: "".to_string(),
+        }
+    }
 }
