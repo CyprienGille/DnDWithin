@@ -98,14 +98,6 @@ pub enum Reroll {
 }
 
 #[derive(Debug)]
-pub struct Currency {
-    copper: Option<i32>,
-    silver: Option<i32>,
-    gold: Option<i32>,
-    platinum: Option<i32>,
-}
-
-#[derive(Debug)]
 pub struct Charges {
     current: u32,
     max: u32,
@@ -128,6 +120,14 @@ impl Charges {
             recharge,
         }
     }
+
+    pub fn empty_attun_slots() -> Self {
+        Self {
+            current: 0,
+            max: 3,
+            recharge: None,
+        }
+    }
 }
 
 #[derive(Debug)]
@@ -143,4 +143,10 @@ pub enum Weight {
     Pounds(u32),
     Grams(u32),
     Kilograms(u32),
+}
+
+impl Default for Weight {
+    fn default() -> Self {
+        Self::Pounds(0)
+    }
 }
