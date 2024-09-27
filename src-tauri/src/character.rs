@@ -1,13 +1,25 @@
-use std::collections::HashSet;
+use std::{collections::HashSet, sync::Mutex};
 
 use crate::{
     ability::{Ability, Skill},
-    commons::{Charges, Currency, DamageType, Dice, Distance},
+    commons::{Charges, DamageType, Dice, Distance},
     description::{Background, Description},
-    equipment::Item,
+    equipment::{Currency, Item},
     feature::Feature,
     spell::{Spell, Spellcasting},
 };
+
+pub struct CharacterState {
+    state: Mutex<Character>,
+}
+
+impl CharacterState {
+    pub fn init() -> Self {
+        Self {
+            state: Mutex::new(Character::get_empty()),
+        }
+    }
+}
 
 #[derive(Debug)]
 pub struct Character {
@@ -23,6 +35,7 @@ pub struct Character {
     passives: Vec<Skill>,
     ac: u8,
     initiative: i8,
+    initiative_fluff: String,
     speeds: Vec<Speed>,
     inspiration: bool,
     conditions: HashSet<Condition>,
@@ -40,6 +53,48 @@ pub struct Character {
     currency: Currency,
     spellcasting: Spellcasting,
     spell_list: Vec<Spell>,
+}
+
+impl Character {
+    pub fn get_empty() -> Self {
+        Self {
+            name: "".to_string(),
+            class: "".to_string(),
+            level: 1,
+            proficiency_bonus: 0,
+            player_name: "".to_string(),
+            species: "".to_string(),
+            health: Health {
+                current_hp: 0,
+                max_hp: 0,
+                temp_hp: 0,
+                hit_dice: Vec::new(),
+            },
+            abilities: Ability::classic(),
+            skills: Skill::classic(),
+            passives: Skill::passives(),
+            ac: 0,
+            initiative: 0,
+            initiative_fluff: "".to_string(),
+            speeds: vec![Speed::Walking(Distance::Feet(30))],
+            inspiration: false,
+            conditions: HashSet::new(),
+            exhaustion: 0,
+            background: Background::get_empty(),
+            senses: HashSet::new(),
+            languages: Vec::new(),
+            weapon_profs: Vec::new(),
+            armor_profs: Vec::new(),
+            tool_profs: Vec::new(),
+            features: Vec::new(),
+            description: Description::default(),
+            equipment: Vec::new(),
+            attunement_slots: Charges::empty_attun_slots(),
+            currency: Currency::default(),
+            spellcasting: Spellcasting::default(),
+            spell_list: Vec::new(),
+        }
+    }
 }
 
 #[derive(Debug)]
@@ -73,7 +128,7 @@ pub struct Health {
     current_hp: u32,
     max_hp: u32,
     temp_hp: u32,
-    hit_dice: Dice,
+    hit_dice: Vec<Dice>,
 }
 
 #[derive(Debug)]
