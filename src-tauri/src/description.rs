@@ -64,4 +64,11 @@ impl Background {
             description: "".to_string(),
         }
     }
+    pub fn placeholder() -> Self {
+        Self {
+            name: "Background".to_string(),
+            reference: None,
+            description: "Placeholder Background".to_string(),
+        }
+    }
 }

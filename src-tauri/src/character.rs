@@ -18,7 +18,7 @@ pub struct CharacterState {
 impl CharacterState {
     pub fn init() -> Self {
         Self {
-            state: Mutex::new(Character::get_empty()),
+            state: Mutex::new(Character::placeholder()),
         }
     }
 }
@@ -60,7 +60,7 @@ pub struct Character {
 impl Character {
     pub fn get_empty() -> Self {
         Self {
-            name: "Character Name".to_string(),
+            name: "".to_string(),
             class: "".to_string(),
             level: 1,
             proficiency_bonus: 0,
@@ -83,6 +83,45 @@ impl Character {
             conditions: HashSet::new(),
             exhaustion: 0,
             background: Background::get_empty(),
+            senses: HashSet::new(),
+            languages: Vec::new(),
+            weapon_profs: Vec::new(),
+            armor_profs: Vec::new(),
+            tool_profs: Vec::new(),
+            features: Vec::new(),
+            description: Description::default(),
+            equipment: Vec::new(),
+            attunement_slots: Charges::empty_attun_slots(),
+            currency: Currency::default(),
+            spellcasting: Spellcasting::default(),
+            spell_list: Vec::new(),
+        }
+    }
+    pub fn placeholder() -> Self {
+        Self {
+            name: "Character Name".to_string(),
+            class: "Class".to_string(),
+            level: 1,
+            proficiency_bonus: 0,
+            player_name: "Player Name".to_string(),
+            species: "Species".to_string(),
+            health: Health {
+                current_hp: 0,
+                max_hp: 0,
+                temp_hp: 0,
+                hit_dice: Vec::new(),
+            },
+            abilities: Ability::classic(),
+            skills: Skill::classic(),
+            passives: Skill::passives(),
+            ac: 0,
+            initiative: 0,
+            initiative_fluff: "".to_string(),
+            speeds: vec![Speed::Walking(Distance::Feet(30))],
+            inspiration: false,
+            conditions: HashSet::new(),
+            exhaustion: 0,
+            background: Background::placeholder(),
             senses: HashSet::new(),
             languages: Vec::new(),
             weapon_profs: Vec::new(),
