@@ -12,6 +12,7 @@ pub struct Item {
     weapon: Option<Weapon>,
     armor: Option<Armor>,
     charges: Option<Charges>,
+    equipped: bool,
 }
 
 #[derive(Debug, Default)]
