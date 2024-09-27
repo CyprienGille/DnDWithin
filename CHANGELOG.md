@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Backend implementation of spells
+- Backend implementation of items
+- Backend implementation of features
+- Backend implementation of abilities
+- Backend implementation of characters
 
 ### Deprecated
 
