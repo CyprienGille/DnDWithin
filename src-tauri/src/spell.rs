@@ -2,15 +2,16 @@ use crate::{
     ability::Ability,
     commons::{Damage, Distance, Reference, Time},
 };
+use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Default, Clone)]
+#[derive(Debug, Default, Clone, Serialize, Deserialize)]
 pub struct Spellcasting {
     modifier: i8,
     spell_attack: i8,
     save_dc: i8,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Spell {
     name: String,
     reference: Option<Reference>,
@@ -107,7 +108,7 @@ impl Spell {
     }
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub enum School {
     Abjuration,
     Conjuration,
@@ -119,26 +120,26 @@ pub enum School {
     Transmutation,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Range {
     range_type: RangeType,
     distance: Option<Distance>,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 enum RangeType {
     Touch,
     Self_,
     Point,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Size {
     size_type: SizeType,
     distance: Option<Distance>,
 }
 
-#[derive(Debug, Default, Clone)]
+#[derive(Debug, Default, Clone, Serialize, Deserialize)]
 enum SizeType {
     #[default]
     Point,
@@ -148,7 +149,7 @@ enum SizeType {
     Square,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Components {
     verbal: bool,
     somatic: bool,

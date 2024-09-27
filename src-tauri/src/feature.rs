@@ -1,6 +1,7 @@
 use crate::commons::{Charges, Reference};
+use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Feature {
     name: String,
     reference: Option<Reference>,
@@ -10,7 +11,7 @@ pub struct Feature {
     charges: Option<Charges>,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub enum FeatureOrigin {
     Species,
     Class,

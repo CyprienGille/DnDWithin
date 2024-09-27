@@ -1,4 +1,6 @@
-#[derive(Debug, Clone)]
+use serde::{Deserialize, Serialize};
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Reference {
     source_name: String,
     long_source_name: Option<String>,
@@ -23,7 +25,7 @@ impl Reference {
     }
 }
 
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Copy)]
 pub enum Time {
     Instant,
     BonusAction,
@@ -32,7 +34,7 @@ pub enum Time {
     Minute(u32),
     Hour(u32),
 }
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Copy, Hash, PartialEq, Eq)]
 pub enum Distance {
     Inches(u32),
     Feet(u32),
@@ -41,12 +43,12 @@ pub enum Distance {
     Meters(u32),
     Kilometers(u32),
 }
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Copy)]
 pub struct Damage {
     dmg_type: DamageType,
     roll: Roll,
 }
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Copy)]
 pub enum DamageType {
     Acid,
     Bludgeoning,
@@ -63,7 +65,7 @@ pub enum DamageType {
     Thunder,
 }
 
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Copy)]
 pub struct Roll {
     dice: Dice,
     bonus: i32,
@@ -98,7 +100,7 @@ impl Default for Roll {
     }
 }
 
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Copy)]
 pub enum Dice {
     D4(u32),
     D6(u32),
@@ -109,14 +111,14 @@ pub enum Dice {
     D100(u32),
 }
 
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Copy)]
 pub enum Reroll {
     Advantage,
     Disadvantage,
     Flat,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Charges {
     current: u32,
     max: u32,
@@ -149,7 +151,7 @@ impl Charges {
     }
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Recharge {
     short_rest: bool,
     long_rest: bool,
@@ -157,7 +159,7 @@ pub struct Recharge {
     regained_charges: Option<Roll>,
 }
 
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Copy)]
 pub enum Weight {
     Pounds(u32),
     Grams(u32),

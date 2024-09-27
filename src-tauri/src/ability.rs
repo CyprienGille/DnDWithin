@@ -1,6 +1,7 @@
 use crate::commons::Roll;
+use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Ability {
     name: String,
     short_name: String,
@@ -45,14 +46,14 @@ impl Ability {
     }
 }
 
-#[derive(Debug, Default, Clone)]
+#[derive(Debug, Default, Clone, Serialize, Deserialize)]
 pub struct SavingThrowInfo {
     proficiency: Proficiency,
     roll: Roll,
     fluff: String,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Skill {
     name: String,
     proficiency: Proficiency,
@@ -103,7 +104,7 @@ impl Skill {
     }
 }
 
-#[derive(Debug, Default, Clone)]
+#[derive(Debug, Default, Clone, Serialize, Deserialize)]
 pub enum Proficiency {
     #[default]
     Not,

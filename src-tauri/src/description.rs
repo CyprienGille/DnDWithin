@@ -1,6 +1,7 @@
 use crate::{commons::Reference, commons::Weight};
+use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Default, Clone)]
+#[derive(Debug, Default, Clone, Serialize, Deserialize)]
 pub struct Description {
     alignment: Option<Alignment>,
     gender: String,
@@ -23,7 +24,7 @@ pub struct Description {
     other_notes: String,
 }
 
-#[derive(Default, Debug, Clone)]
+#[derive(Default, Debug, Clone, Serialize, Deserialize)]
 pub enum Alignment {
     Unaligned,
     LawfulGood,
@@ -38,7 +39,7 @@ pub enum Alignment {
     ChaoticEvil,
 }
 
-#[derive(Debug, Default, Clone)]
+#[derive(Debug, Default, Clone, Serialize, Deserialize)]
 pub enum Size {
     Tiny,
     Small,
@@ -48,7 +49,7 @@ pub enum Size {
     Huge,
     Gargantuan,
 }
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Background {
     name: String,
     reference: Option<Reference>,

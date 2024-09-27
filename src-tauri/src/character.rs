@@ -1,5 +1,7 @@
 use std::{collections::HashSet, sync::Mutex};
 
+use serde::{Deserialize, Serialize};
+
 use crate::{
     ability::{Ability, Skill},
     commons::{Charges, DamageType, Dice, Distance},
@@ -21,7 +23,7 @@ impl CharacterState {
     }
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Character {
     name: String,
     class: String,
@@ -58,7 +60,7 @@ pub struct Character {
 impl Character {
     pub fn get_empty() -> Self {
         Self {
-            name: "".to_string(),
+            name: "Character Name".to_string(),
             class: "".to_string(),
             level: 1,
             proficiency_bonus: 0,
@@ -97,7 +99,7 @@ impl Character {
     }
 }
 
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Copy, PartialEq, Eq, Hash)]
 pub enum Sense {
     Blindsight(Distance),
     Darkvision(Distance),
@@ -105,7 +107,7 @@ pub enum Sense {
     Truesight(Distance),
 }
 
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Copy, Eq, PartialEq, Hash)]
 pub enum Condition {
     Blinded,
     Charmed,
@@ -123,7 +125,7 @@ pub enum Condition {
     Unconscious,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Health {
     current_hp: u32,
     max_hp: u32,
@@ -143,7 +145,7 @@ pub enum DamageInteraction {
     Immune(DamageType),
     Vulnerable(DamageType),
 }
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Copy)]
 pub enum Speed {
     Burrowing(Distance),
     Climbing(Distance),

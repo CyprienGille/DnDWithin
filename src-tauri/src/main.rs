@@ -20,6 +20,7 @@ fn get_character(character_state: State<CharacterState>) -> Character {
 fn main() {
     tauri::Builder::default()
         .manage(CharacterState::init())
+        .invoke_handler(tauri::generate_handler![get_character])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

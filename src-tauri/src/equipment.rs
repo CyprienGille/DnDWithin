@@ -1,6 +1,7 @@
 use crate::commons::{Charges, Damage, Distance, Reference, Weight};
+use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Item {
     name: String,
     reference: Option<Reference>,
@@ -16,7 +17,7 @@ pub struct Item {
     equipped: bool,
 }
 
-#[derive(Debug, Default, Clone)]
+#[derive(Debug, Default, Clone, Serialize, Deserialize)]
 pub enum Rarity {
     #[default]
     Common,
@@ -28,13 +29,13 @@ pub enum Rarity {
     None,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Attunement {
     required: bool,
     by: Option<String>,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Weapon {
     damage: Vec<Damage>,
     category: WeaponCategory,
@@ -42,13 +43,13 @@ pub struct Weapon {
     range: Option<Range>,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub enum WeaponCategory {
     Martial,
     Simple,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub enum WeaponProperty {
     Ammunition,
     Finesse,
@@ -63,13 +64,13 @@ pub enum WeaponProperty {
     Versatile,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Range {
     base: Distance,
     long: Option<Distance>,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Armor {
     armor_type: ArmorType,
     ac: u32,
@@ -78,14 +79,14 @@ pub struct Armor {
     stealth_disadvantage: bool,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub enum ArmorType {
     Light,
     Medium,
     Heavy,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Currency {
     copper: Option<i32>,
     silver: Option<i32>,
