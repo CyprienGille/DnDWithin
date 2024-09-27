@@ -1,4 +1,4 @@
-use crate::commons::{Charges, Currency, Damage, Distance, Reference, Weight};
+use crate::commons::{Charges, Damage, Distance, Reference, Weight};
 #[derive(Debug)]
 pub struct Item {
     name: String,
@@ -76,4 +76,58 @@ pub enum ArmorType {
     Light,
     Medium,
     Heavy,
+}
+
+#[derive(Debug)]
+pub struct Currency {
+    copper: Option<i32>,
+    silver: Option<i32>,
+    gold: Option<i32>,
+    platinum: Option<i32>,
+}
+
+impl Currency {
+    pub fn copper_only(amount: i32) -> Self {
+        Self {
+            copper: Some(amount),
+            silver: None,
+            gold: None,
+            platinum: None,
+        }
+    }
+    pub fn silver_only(amount: i32) -> Self {
+        Self {
+            copper: None,
+            silver: Some(amount),
+            gold: None,
+            platinum: None,
+        }
+    }
+    pub fn gold_only(amount: i32) -> Self {
+        Self {
+            copper: None,
+            silver: None,
+            gold: Some(amount),
+            platinum: None,
+        }
+    }
+    pub fn platinum_only(amount: i32) -> Self {
+        Self {
+            copper: None,
+            silver: None,
+            gold: None,
+            platinum: Some(amount),
+        }
+    }
+}
+
+impl Default for Currency {
+    fn default() -> Self {
+        Self {
+            copper: Some(0),
+            silver: Some(0),
+            gold: Some(0),
+            platinum: Some(0),
+        }
+    }
 }
