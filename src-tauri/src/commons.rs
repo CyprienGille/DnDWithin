@@ -4,6 +4,25 @@ pub struct Reference {
     long_source_name: Option<String>,
     page: u32,
 }
+
+impl Reference {
+    pub fn phb_spells() -> Self {
+        Self {
+            source_name: "PHB".to_string(),
+            long_source_name: Some("Player's Handbook".to_string()),
+            page: 211,
+        }
+    }
+
+    pub fn dmg_items() -> Self {
+        Self {
+            source_name: "DMG".to_string(),
+            long_source_name: Some("Dungeon Master's Guide".to_string()),
+            page: 150,
+        }
+    }
+}
+
 #[derive(Debug)]
 pub enum Time {
     Instant,
