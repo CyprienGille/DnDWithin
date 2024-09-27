@@ -16,7 +16,7 @@ pub struct Spell {
     school: School,
     casting_time: Time,
     range: Range,
-    size: Size,
+    size: Option<Size>,
     components: Components,
     duration: Time,
     concentration: bool,
@@ -39,7 +39,7 @@ impl Spell {
         school: School,
         casting_time: Time,
         range: Range,
-        size: Size,
+        size: Option<Size>,
         components: Components,
         duration: Time,
         concentration: bool,
@@ -71,6 +71,36 @@ impl Spell {
             saving_throw,
             base_damage,
             damage_increase,
+        }
+    }
+
+    pub fn placeholder() -> Self {
+        Self {
+            name: "Spell name".to_string(),
+            reference: Some(Reference::phb_spells()),
+            level: 0,
+            school: School::Abjuration,
+            casting_time: Time::Action,
+            range: Range {
+                range_type: RangeType::Self_,
+                distance: None,
+            },
+            size: None,
+            components: Components {
+                verbal: true,
+                somatic: true,
+                material: None,
+            },
+            duration: Time::Hour(1),
+            concentration: true,
+            prepared: false,
+            known: true,
+            description: "Description of the spell".to_string(),
+            consumes_slot: true,
+            upcast: 0,
+            saving_throw: None,
+            base_damage: None,
+            damage_increase: None,
         }
     }
 }
