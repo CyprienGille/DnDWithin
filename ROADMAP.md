@@ -51,11 +51,11 @@
 
 - [x] Background
 - [x] Better logo
-- [ ] Ability to switch between light and dark mode
 - [ ] Dynamic columns depending on the width of the window
 
 # FUTURE
 
+- [ ] Ability to switch between light and dark mode
 - [ ] MacOS version
 - [ ] Linux version
 - [ ] Mobile version
