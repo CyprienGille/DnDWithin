@@ -1,18 +1,22 @@
 <script lang="ts">
-	import type { RollType } from './types';
+	import type { RollType } from './commons';
+	import { add_sign } from './commons';
 
 	export let roll: RollType;
 
 	function get_bonus_string(bonus: number): string {
 		if (bonus == 0) {
 			return '';
-		} else if (bonus > 0) {
-			return '+' + bonus;
+		} else {
+			return add_sign(bonus);
 		}
-		return bonus.toString();
+	}
+
+	function trigger_roll() {
+		console.log('Rolled ' + roll.dice_amount + roll.dice + get_bonus_string(roll.bonus));
 	}
 </script>
 
-<main>
-	<span>{roll.dice_amount}{roll.dice}{get_bonus_string(roll.bonus)}</span>
-</main>
+<button class="btn btn-sm variant-ringed" on:click={trigger_roll}>
+	<slot />
+</button>
