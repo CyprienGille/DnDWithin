@@ -37,10 +37,10 @@ impl Ability {
     pub fn classic() -> Vec<Self> {
         vec![
             Self::init("Strength".to_string()),
-            Self::init("Dexterity".to_string()),
-            Self::init("Constitution".to_string()),
             Self::init("Intelligence".to_string()),
+            Self::init("Dexterity".to_string()),
             Self::init("Wisdom".to_string()),
+            Self::init("Constitution".to_string()),
             Self::init("Charisma".to_string()),
         ]
     }
@@ -50,7 +50,6 @@ impl Ability {
 pub struct SavingThrowInfo {
     proficiency: Proficiency,
     roll: Roll,
-    fluff: String,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
