@@ -27,12 +27,12 @@ impl CharacterState {
 pub struct Character {
     name: String,
     class: String,
-    level: u8,
     proficiency_bonus: u8,
     player_name: String,
     species: String,
     health: Health,
     abilities: Vec<Ability>,
+    st_fluff: String,
     skills: Vec<Skill>,
     passives: Vec<Skill>,
     ac: u8,
@@ -62,7 +62,6 @@ impl Character {
         Self {
             name: "".to_string(),
             class: "".to_string(),
-            level: 1,
             proficiency_bonus: 0,
             player_name: "".to_string(),
             species: "".to_string(),
@@ -73,6 +72,7 @@ impl Character {
                 hit_dice: Vec::new(),
             },
             abilities: Ability::classic(),
+            st_fluff: "".to_string(),
             skills: Skill::classic(),
             passives: Skill::passives(),
             ac: 0,
@@ -100,8 +100,7 @@ impl Character {
     pub fn placeholder() -> Self {
         Self {
             name: "Character Name".to_string(),
-            class: "Class".to_string(),
-            level: 1,
+            class: "Class 1".to_string(),
             proficiency_bonus: 0,
             player_name: "Player Name".to_string(),
             species: "Species".to_string(),
@@ -112,6 +111,7 @@ impl Character {
                 hit_dice: Vec::new(),
             },
             abilities: Ability::classic(),
+            st_fluff: "".to_string(),
             skills: Skill::classic(),
             passives: Skill::passives(),
             ac: 0,
