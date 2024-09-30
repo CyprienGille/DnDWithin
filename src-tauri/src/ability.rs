@@ -106,8 +106,8 @@ impl Skill {
 #[derive(Debug, Default, Clone, Serialize, Deserialize)]
 pub enum Proficiency {
     #[default]
-    Not,
-    Half,
+    NotProficient,
+    HalfProficient,
     Proficient,
     Expert,
 }
