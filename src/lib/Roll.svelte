@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { RollType } from './commons';
-	import { add_sign } from './commons';
+	import { addSign, diceToString } from './commons';
 
 	export let roll: RollType;
 
@@ -8,12 +8,12 @@
 		if (bonus == 0) {
 			return '';
 		} else {
-			return add_sign(bonus);
+			return addSign(bonus);
 		}
 	}
 
 	function trigger_roll() {
-		console.log('Rolled ' + roll.dice_amount + roll.dice + get_bonus_string(roll.bonus));
+		console.log('Rolled ' + diceToString(roll.dice) + get_bonus_string(roll.bonus));
 	}
 </script>
 
