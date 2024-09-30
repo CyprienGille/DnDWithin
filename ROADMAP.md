@@ -2,8 +2,7 @@
 
 ## General
 
-- [ ] Tabs
-- [ ] Add lock to character sheet
+- [x] Side menu with useful options
 - [ ] In-App dice rolling
 
 ## Spells
@@ -39,22 +38,23 @@
 
 ## Abilities
 
-- [ ] Option to auto-fill skill bonuses
+- [x] Compact display
+- [ ] Option to auto-fill skill bonuses using proficiencies
 
 ## Backend
 
-- [ ] Full rework to remove repetition and make DDW more expandable
+- [x] Full rework to remove repetition and make DDW more expandable
 - [ ] Ability to migrate characters from old version
 
 ## Frontend and Appearance
 
 - [x] Background
 - [x] Better logo
+- [x] Ability to switch between light and dark mode
 - [ ] Dynamic columns depending on the width of the window
 
 # FUTURE
 
-- [ ] Ability to switch between light and dark mode
 - [ ] Ability to add token picture to sheet
 - [ ] MacOS version
 - [ ] Linux version

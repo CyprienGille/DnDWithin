@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Side drawer with useful buttons
+- Light/Dark mode toggle
+- Tooltips all over
+
 ### Changed
 
 - Backend implementation of spells
@@ -26,3 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 ### Security
+
+# [0.2.5] - 2024-07-02
+
+Details lost to time.
