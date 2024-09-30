@@ -2,7 +2,8 @@
 	export let abilities;
 	export let st_fluff = '';
 
-	import { add_sign, RollType } from './commons';
+	import { addSign, Dice, RollType } from './commons';
+	import Proficiency from './Proficiency.svelte';
 	import Roll from './Roll.svelte';
 
 	function scoreToMod(score: number): number {
@@ -14,18 +15,21 @@
 	{#each abilities as ability}
 		<div class="px-2 py-1">
 			<div title={ability.name}>{ability.short_name}</div>
-			<div class="grid grid-rows-2 text-sm mb-1">
+			<div class="grid grid-rows-3 text-sm mb-1">
 				<div class="grid grid-cols-3">
 					<span title="Modifier">Mod</span>
 					<span class="divider-vertical"></span>
 					<span title="Saving throw modifier">Save</span>
 				</div>
-				<div class="grid grid-cols-3">
-					<Roll roll={new RollType('d20', 1, scoreToMod(ability.score))}
-						>{add_sign(scoreToMod(ability.score))}</Roll
+				<div class="grid grid-cols-3 row-span-2 justify-evenly">
+					<Roll roll={new RollType(new Dice('D20', 1), scoreToMod(ability.score), 'Flat')}
+						>{addSign(scoreToMod(ability.score))}</Roll
 					>
 					<span class="divider-vertical"></span>
-					<span title="Saving throw modifier">Save</span>
+					<span class="grid" title="Saving throw">
+						<Proficiency proficiency={ability.saving_throw.proficiency} />
+						<Roll roll={ability.saving_throw.roll}>{addSign(ability.saving_throw.roll.bonus)}</Roll>
+					</span>
 				</div>
 			</div>
 			<input
