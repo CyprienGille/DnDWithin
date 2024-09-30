@@ -17,6 +17,10 @@
 	</h1>
 	<div class="container grid-cols-1 w-full text-center">
 		<button class="btn variant-soft-surface my-2">Open Character Sheet</button>
+		<button
+			class="btn variant-soft-surface my-2"
+			title="Try filling all modifiers that use proficiencies.">Auto-fill modifiers</button
+		>
 		<!-- <button class="btn variant-soft-surface my-2">Close Character Sheet</button> -->
 		<button class="btn variant-soft-surface my-2">Export to JSON</button>
 		<div class="w-full justify-center flex my-2">
