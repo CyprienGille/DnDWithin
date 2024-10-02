@@ -62,6 +62,7 @@
 - [ ] Combat mode with trimmed-down display
 - [ ] Long and Short Rest buttons that reset the appropriate features
 - [ ] Casting spells from items, adding those to the spell display
+- [ ] Class-specific features (e.g. Wild Shape, Steel Defender...)
 - [ ] Ability to have multiple characters open at the same time
 - [ ] Internationalization
 - [ ] 2024 Rules version
