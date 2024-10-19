@@ -111,7 +111,7 @@ impl Character {
                 hit_dice: Vec::new(),
             },
             abilities: Ability::classic(),
-            st_fluff: "".to_string(),
+            st_fluff: "A against being charmed".to_string(),
             skills: Skill::classic(),
             passives: Skill::passives(),
             ac: 0,
