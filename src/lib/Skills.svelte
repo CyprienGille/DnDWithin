@@ -15,7 +15,7 @@
 			<span class="px-2">
 				<Roll roll={skill.roll}>{addSign(skill.roll.bonus)}</Roll>
 			</span>
-			<span class="">
+			<span class="pt-1.5">
 				{skill.name}
 			</span>
 		</div>
